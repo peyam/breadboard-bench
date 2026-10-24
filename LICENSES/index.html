@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About and licences</title>
+<style>
+  @font-face { font-family: "Lexend"; src: url("../fonts/lexend-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+  @font-face { font-family: "Fredoka"; src: url("../fonts/fredoka-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+  :root { --ink: #1B2A41; --paper: #FFFBF3; --muted: #5A6475; --line: #E6DDCB; --link: #0F7C80; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink: #F3EEE3; --paper: #141C2A; --muted: #A9B1BF; --line: #2C3850; --link: #5CC8C4; } }
+  :root[data-theme="dark"] { --ink: #F3EEE3; --paper: #141C2A; --muted: #A9B1BF; --line: #2C3850; --link: #5CC8C4; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 "Lexend", system-ui, sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 24px 16px 48px; }
+  h1, h2 { font-family: "Fredoka", "Lexend", sans-serif; font-weight: 600; line-height: 1.2; }
+  h1 { font-size: 1.8rem; margin: 0 0 8px; }
+  h2 { font-size: 1.15rem; margin: 28px 0 6px; }
+  p, li { margin: 6px 0; }
+  a { color: var(--link); }
+  .note { color: var(--muted); font-size: .92rem; }
+  ul { padding-left: 1.2rem; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Breadboard Bench</h1>
+  <p>A free, open-source digital-logic simulator for <i>The Breadboard Computer</i> (PC-2).
+     Breadboard Bench is under the MIT licence: <a href="Breadboard-Bench-MIT.txt">licence text</a>.</p>
+  <p class="note"><a href="../index.html">Back to the app</a></p>
+
+  <h2>Parts of other projects inside the app</h2>
+  <p>Breadboard Bench runs its Python engine in the browser with the software below, copied
+     unchanged so the app works offline. Each keeps its own licence.</p>
+  <ul>
+    <li><b>Pyodide 314.0.7</b> (folder <code>pyodide/</code>): Mozilla Public License 2.0.
+      <a href="Pyodide-MPL-2.0.txt">Licence and notice</a>. Source code:
+      <a href="https://github.com/pyodide/pyodide/tree/314.0.7">github.com/pyodide/pyodide/tree/314.0.7</a>.</li>
+    <li><b>CPython 3.14.2</b>, the Python interpreter and standard library inside Pyodide: PSF License
+      Agreement, with the licences of the software built into it (libffi, expat, zlib, mpdecimal,
+      HACL* and others). <a href="CPython-3.14-LICENSE.txt">Licence and notices</a>.</li>
+    <li><b>Emscripten 5.0.3</b> runtime, part of Pyodide's files: MIT licence (or University of
+      Illinois/NCSA). <a href="Emscripten-LICENSE.txt">Licence</a>.</li>
+  </ul>
+
+  <h2>Fonts</h2>
+  <p>The fonts of the book, in the folder <code>fonts/</code>, under the SIL Open Font License 1.1:</p>
+  <ul>
+    <li><b>Fredoka</b>: Copyright 2016 The Fredoka Project Authors. <a href="OFL-Fredoka.txt">Licence</a>.</li>
+    <li><b>Lexend</b>: Copyright 2019 The Lexend Project Authors. <a href="OFL-Lexend.txt">Licence</a>.</li>
+    <li><b>JetBrains Mono</b>: Copyright 2020 The JetBrains Mono Project Authors. <a href="OFL-JetBrainsMono.txt">Licence</a>.</li>
+  </ul>
+  <hr>
+  <p class="note">The engine is also a Python package (<code>bbench</code>, MIT); its wheel carries the same MIT licence.</p>
+</main>
+<script>
+  try { const t = localStorage.getItem("bb-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</body>
+</html>
