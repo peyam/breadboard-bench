@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bbench"
+version = "1.0.0"
+description = "Breadboard Bench: a digital-logic simulator for learning how computers work (engine)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+classifiers = ["License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3",
+               "Topic :: Education", "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)"]
+
+[project.scripts]
+bbench = "bbench.cli:main"
+
+# The book's module names (from bench import Bench; import pc2, pc2tools: book_modules/) are
+# added to the wheel by tools/build_wheel.py.
+[tool.setuptools.packages.find]
+include = ["bbench*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
