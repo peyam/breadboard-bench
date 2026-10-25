@@ -1,0 +1,471 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "NOR from NAND gates",
+ "notes": "NOT A and NOT B (NAND gates with joined inputs), a NAND of those is A OR B, and one more NAND as an inverter gives A NOR B. All four gates of one 74HC00.",
+ "parts": [
+  {
+   "id": "U1",
+   "type": "74HC00",
+   "x": 200,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "board": "Main"
+   }
+  },
+  {
+   "id": "SA",
+   "type": "SW",
+   "x": 0,
+   "y": 60,
+   "rot": 0,
+   "props": {
+    "label": "A",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "RSA",
+   "type": "R",
+   "x": 0,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down A",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "SB",
+   "type": "SW",
+   "x": 0,
+   "y": 160,
+   "rot": 0,
+   "props": {
+    "label": "B",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "RSB",
+   "type": "R",
+   "x": 0,
+   "y": 200,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down B",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "RD1",
+   "type": "R",
+   "x": 420,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "value": "1k",
+    "label": "LED resistor (NOR)",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "D1",
+   "type": "LED",
+   "x": 420,
+   "y": 140,
+   "rot": 0,
+   "props": {
+    "colour": "red",
+    "label": "NOR",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "CU1",
+   "type": "C",
+   "x": 0,
+   "y": 0,
+   "rot": 0,
+   "props": {
+    "value": "100nF",
+    "label": "decoupling U1",
+    "board": "Main"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U1",
+     "7"
+    ],
+    [
+     "RSA",
+     "2"
+    ],
+    [
+     "RSB",
+     "2"
+    ],
+    [
+     "D1",
+     "2"
+    ],
+    [
+     "CU1",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U1",
+     "14"
+    ],
+    [
+     "SA",
+     "1"
+    ],
+    [
+     "SB",
+     "1"
+    ],
+    [
+     "CU1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A",
+   "pins": [
+    [
+     "SA",
+     "2"
+    ],
+    [
+     "RSA",
+     "1"
+    ],
+    [
+     "U1",
+     "1"
+    ],
+    [
+     "U1",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "B",
+   "pins": [
+    [
+     "SB",
+     "2"
+    ],
+    [
+     "RSB",
+     "1"
+    ],
+    [
+     "U1",
+     "4"
+    ],
+    [
+     "U1",
+     "5"
+    ]
+   ]
+  },
+  {
+   "name": "NA",
+   "pins": [
+    [
+     "U1",
+     "3"
+    ],
+    [
+     "U1",
+     "9"
+    ]
+   ]
+  },
+  {
+   "name": "NB",
+   "pins": [
+    [
+     "U1",
+     "6"
+    ],
+    [
+     "U1",
+     "10"
+    ]
+   ]
+  },
+  {
+   "name": "OR",
+   "pins": [
+    [
+     "U1",
+     "8"
+    ],
+    [
+     "U1",
+     "12"
+    ],
+    [
+     "U1",
+     "13"
+    ]
+   ]
+  },
+  {
+   "name": "NOR",
+   "pins": [
+    [
+     "U1",
+     "11"
+    ],
+    [
+     "RD1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "NOR~LED",
+   "pins": [
+    [
+     "RD1",
+     "2"
+    ],
+    [
+     "D1",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [
+  {
+   "id": "BB1",
+   "name": "Main",
+   "x": 0,
+   "y": 0,
+   "placements": [
+    {
+     "part": "U1",
+     "row": 1,
+     "hole": "e"
+    },
+    {
+     "part": "RD1",
+     "legs": {
+      "2": [
+       9,
+       "d"
+      ],
+      "1": [
+       9,
+       "f"
+      ]
+     }
+    },
+    {
+     "part": "SA",
+     "legs": {
+      "2": [
+       1,
+       "a"
+      ],
+      "1": [
+       "B+",
+       1
+      ]
+     }
+    },
+    {
+     "part": "RSA",
+     "legs": {
+      "1": [
+       2,
+       "a"
+      ],
+      "2": [
+       "B-",
+       2
+      ]
+     }
+    },
+    {
+     "part": "SB",
+     "legs": {
+      "2": [
+       4,
+       "a"
+      ],
+      "1": [
+       "B+",
+       4
+      ]
+     }
+    },
+    {
+     "part": "RSB",
+     "legs": {
+      "1": [
+       5,
+       "a"
+      ],
+      "2": [
+       "B-",
+       5
+      ]
+     }
+    },
+    {
+     "part": "D1",
+     "legs": {
+      "1": [
+       9,
+       "a"
+      ],
+      "2": [
+       "B-",
+       9
+      ]
+     }
+    },
+    {
+     "part": "CU1",
+     "legs": {
+      "1": [
+       1,
+       "j"
+      ],
+      "2": [
+       "T-",
+       1
+      ]
+     }
+    }
+   ],
+   "wires": [
+    {
+     "a": [
+      1,
+      "b"
+     ],
+     "b": [
+      2,
+      "b"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      3,
+      "a"
+     ],
+     "b": [
+      6,
+      "j"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      4,
+      "b"
+     ],
+     "b": [
+      5,
+      "b"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      5,
+      "j"
+     ],
+     "b": [
+      6,
+      "a"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      7,
+      "d"
+     ],
+     "b": "T-",
+     "colour": "#222222"
+    },
+    {
+     "a": [
+      2,
+      "j"
+     ],
+     "b": [
+      3,
+      "j"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      3,
+      "i"
+     ],
+     "b": [
+      7,
+      "j"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      4,
+      "j"
+     ],
+     "b": [
+      9,
+      "j"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      1,
+      "i"
+     ],
+     "b": "T+",
+     "colour": "#D7372B"
+    }
+   ]
+  }
+ ],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "A",
+  "B",
+  "OR",
+  "NOR"
+ ]
+}

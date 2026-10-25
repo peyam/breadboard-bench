@@ -1,0 +1,412 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "555 astable clock",
+ "notes": "A 555 timer as a clock: t_high = 0.693 (R1 + R2) C, t_low = 0.693 R2 C. With 1 k, 68 k and 10 uF it blinks about once a second.",
+ "parts": [
+  {
+   "id": "U1",
+   "type": "NE555",
+   "x": 200,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "board": "Main"
+   }
+  },
+  {
+   "id": "R1U1",
+   "type": "R",
+   "x": 80,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "value": "1k",
+    "label": "astable R1",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "R2U1",
+   "type": "R",
+   "x": 80,
+   "y": 150,
+   "rot": 0,
+   "props": {
+    "value": "68k",
+    "label": "astable R2",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "C1U1",
+   "type": "C",
+   "x": 80,
+   "y": 200,
+   "rot": 0,
+   "props": {
+    "value": "10uF",
+    "label": "timing capacitor",
+    "polarised": true,
+    "board": "Main"
+   }
+  },
+  {
+   "id": "C2U1",
+   "type": "C",
+   "x": 80,
+   "y": 250,
+   "rot": 0,
+   "props": {
+    "value": "10nF",
+    "label": "control-voltage decoupling",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "RD1",
+   "type": "R",
+   "x": 420,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "value": "1k",
+    "label": "LED resistor (CLK)",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "D1",
+   "type": "LED",
+   "x": 420,
+   "y": 140,
+   "rot": 0,
+   "props": {
+    "colour": "yellow",
+    "label": "CLK",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "CU1",
+   "type": "C",
+   "x": 0,
+   "y": 0,
+   "rot": 0,
+   "props": {
+    "value": "100nF",
+    "label": "decoupling U1",
+    "board": "Main"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U1",
+     "1"
+    ],
+    [
+     "C1U1",
+     "2"
+    ],
+    [
+     "C2U1",
+     "2"
+    ],
+    [
+     "D1",
+     "2"
+    ],
+    [
+     "CU1",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U1",
+     "8"
+    ],
+    [
+     "U1",
+     "4"
+    ],
+    [
+     "R1U1",
+     "1"
+    ],
+    [
+     "CU1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "DIS_U1",
+   "pins": [
+    [
+     "U1",
+     "7"
+    ],
+    [
+     "R1U1",
+     "2"
+    ],
+    [
+     "R2U1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CT_U1",
+   "pins": [
+    [
+     "U1",
+     "6"
+    ],
+    [
+     "U1",
+     "2"
+    ],
+    [
+     "R2U1",
+     "2"
+    ],
+    [
+     "C1U1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CV_U1",
+   "pins": [
+    [
+     "U1",
+     "5"
+    ],
+    [
+     "C2U1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CLK",
+   "pins": [
+    [
+     "U1",
+     "3"
+    ],
+    [
+     "RD1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CLK~LED",
+   "pins": [
+    [
+     "RD1",
+     "2"
+    ],
+    [
+     "D1",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [
+  {
+   "id": "BB1",
+   "name": "Main",
+   "x": 0,
+   "y": 0,
+   "placements": [
+    {
+     "part": "U1",
+     "row": 1,
+     "hole": "e"
+    },
+    {
+     "part": "R2U1",
+     "legs": {
+      "1": [
+       6,
+       "d"
+      ],
+      "2": [
+       6,
+       "f"
+      ]
+     }
+    },
+    {
+     "part": "RD1",
+     "legs": {
+      "2": [
+       7,
+       "d"
+      ],
+      "1": [
+       7,
+       "f"
+      ]
+     }
+    },
+    {
+     "part": "R1U1",
+     "legs": {
+      "2": [
+       2,
+       "j"
+      ],
+      "1": [
+       "T+",
+       2
+      ]
+     }
+    },
+    {
+     "part": "C1U1",
+     "legs": {
+      "1": [
+       2,
+       "a"
+      ],
+      "2": [
+       "B-",
+       2
+      ]
+     }
+    },
+    {
+     "part": "C2U1",
+     "legs": {
+      "1": [
+       4,
+       "j"
+      ],
+      "2": [
+       "T-",
+       4
+      ]
+     }
+    },
+    {
+     "part": "D1",
+     "legs": {
+      "1": [
+       7,
+       "a"
+      ],
+      "2": [
+       "B-",
+       7
+      ]
+     }
+    },
+    {
+     "part": "CU1",
+     "legs": {
+      "1": [
+       1,
+       "j"
+      ],
+      "2": [
+       "T-",
+       1
+      ]
+     }
+    }
+   ],
+   "wires": [
+    {
+     "a": [
+      1,
+      "d"
+     ],
+     "b": "T-",
+     "colour": "#222222"
+    },
+    {
+     "a": [
+      3,
+      "j"
+     ],
+     "b": [
+      2,
+      "b"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      3,
+      "i"
+     ],
+     "b": [
+      6,
+      "j"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      3,
+      "a"
+     ],
+     "b": [
+      7,
+      "j"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      1,
+      "i"
+     ],
+     "b": "T+",
+     "colour": "#D7372B"
+    },
+    {
+     "a": [
+      4,
+      "a"
+     ],
+     "b": "B+",
+     "colour": "#D7372B"
+    },
+    {
+     "a": [
+      6,
+      "a"
+     ],
+     "b": [
+      2,
+      "i"
+     ],
+     "colour": "#4E9F3D"
+    }
+   ]
+  }
+ ],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "CLK"
+ ]
+}

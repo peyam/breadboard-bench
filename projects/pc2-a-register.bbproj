@@ -1,0 +1,1361 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "PC-2 A register",
+ "notes": "The A register module of PC-2 on its own. The switches IN1, IN2, ... stand in for the signals that come from other modules: CLK, RST, AI_n, BUS3, BUS2, BUS1, BUS0, BUS7, BUS6, BUS5, BUS4, AO_n.",
+ "parts": [
+  {
+   "id": "U7",
+   "type": "74HCT173",
+   "x": 960,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bits 0-3"
+   }
+  },
+  {
+   "id": "U8",
+   "type": "74HCT173",
+   "x": 1260,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bits 4-7"
+   }
+  },
+  {
+   "id": "U9",
+   "type": "74HCT245",
+   "x": 960,
+   "y": 350,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A to bus"
+   }
+  },
+  {
+   "id": "R17",
+   "type": "R",
+   "x": 50,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "LED resistor (A bit 7)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED10",
+   "type": "LED",
+   "x": 290,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bit 7",
+    "colour": "red",
+    "resistor": "R17"
+   }
+  },
+  {
+   "id": "R18",
+   "type": "R",
+   "x": 480,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "LED resistor (A bit 6)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED11",
+   "type": "LED",
+   "x": 720,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bit 6",
+    "colour": "red",
+    "resistor": "R18"
+   }
+  },
+  {
+   "id": "R19",
+   "type": "R",
+   "x": 910,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "LED resistor (A bit 5)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED12",
+   "type": "LED",
+   "x": 1150,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bit 5",
+    "colour": "red",
+    "resistor": "R19"
+   }
+  },
+  {
+   "id": "R20",
+   "type": "R",
+   "x": 50,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "LED resistor (A bit 4)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED13",
+   "type": "LED",
+   "x": 290,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bit 4",
+    "colour": "red",
+    "resistor": "R20"
+   }
+  },
+  {
+   "id": "R21",
+   "type": "R",
+   "x": 480,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "LED resistor (A bit 3)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED14",
+   "type": "LED",
+   "x": 720,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bit 3",
+    "colour": "red",
+    "resistor": "R21"
+   }
+  },
+  {
+   "id": "R22",
+   "type": "R",
+   "x": 910,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "LED resistor (A bit 2)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED15",
+   "type": "LED",
+   "x": 1150,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bit 2",
+    "colour": "red",
+    "resistor": "R22"
+   }
+  },
+  {
+   "id": "R23",
+   "type": "R",
+   "x": 50,
+   "y": 980,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "LED resistor (A bit 1)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED16",
+   "type": "LED",
+   "x": 290,
+   "y": 980,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bit 1",
+    "colour": "red",
+    "resistor": "R23"
+   }
+  },
+  {
+   "id": "R24",
+   "type": "R",
+   "x": 480,
+   "y": 980,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "LED resistor (A bit 0)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED17",
+   "type": "LED",
+   "x": 720,
+   "y": 980,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "A bit 0",
+    "colour": "red",
+    "resistor": "R24"
+   }
+  },
+  {
+   "id": "CD7",
+   "type": "C",
+   "x": 920,
+   "y": 980,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "decoupling U7",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD8",
+   "type": "C",
+   "x": 1100,
+   "y": 980,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "decoupling U8",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD9",
+   "type": "C",
+   "x": 1280,
+   "y": 980,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "decoupling U9",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CB4",
+   "type": "C",
+   "x": 60,
+   "y": 1080,
+   "rot": 0,
+   "props": {
+    "module": "A register",
+    "board": "A register",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "IN1",
+   "type": "BUTTON",
+   "x": 60,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "CLK",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN1",
+   "type": "R",
+   "x": 250,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN2",
+   "type": "SW",
+   "x": 60,
+   "y": 130,
+   "rot": 0,
+   "props": {
+    "label": "RST",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN2",
+   "type": "R",
+   "x": 250,
+   "y": 120,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN3",
+   "type": "SW",
+   "x": 60,
+   "y": 200,
+   "rot": 0,
+   "props": {
+    "label": "AI_n",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN3",
+   "type": "R",
+   "x": 260,
+   "y": 190,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN4",
+   "type": "SW",
+   "x": 60,
+   "y": 270,
+   "rot": 0,
+   "props": {
+    "label": "BUS3",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN4",
+   "type": "R",
+   "x": 260,
+   "y": 260,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN5",
+   "type": "SW",
+   "x": 60,
+   "y": 340,
+   "rot": 0,
+   "props": {
+    "label": "BUS2",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN5",
+   "type": "R",
+   "x": 260,
+   "y": 330,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN6",
+   "type": "SW",
+   "x": 60,
+   "y": 410,
+   "rot": 0,
+   "props": {
+    "label": "BUS1",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN6",
+   "type": "R",
+   "x": 260,
+   "y": 400,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN7",
+   "type": "SW",
+   "x": 60,
+   "y": 480,
+   "rot": 0,
+   "props": {
+    "label": "BUS0",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN7",
+   "type": "R",
+   "x": 260,
+   "y": 470,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN8",
+   "type": "SW",
+   "x": 60,
+   "y": 550,
+   "rot": 0,
+   "props": {
+    "label": "BUS7",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN8",
+   "type": "R",
+   "x": 260,
+   "y": 540,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN9",
+   "type": "SW",
+   "x": 60,
+   "y": 620,
+   "rot": 0,
+   "props": {
+    "label": "BUS6",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN9",
+   "type": "R",
+   "x": 260,
+   "y": 610,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN10",
+   "type": "SW",
+   "x": 60,
+   "y": 690,
+   "rot": 0,
+   "props": {
+    "label": "BUS5",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN10",
+   "type": "R",
+   "x": 260,
+   "y": 680,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN11",
+   "type": "SW",
+   "x": 490,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "BUS4",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN11",
+   "type": "R",
+   "x": 690,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN12",
+   "type": "SW",
+   "x": 490,
+   "y": 110,
+   "rot": 0,
+   "props": {
+    "label": "AO_n",
+    "module": "A register",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN12",
+   "type": "R",
+   "x": 690,
+   "y": 90,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "A register",
+    "role": "input"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U7",
+     "1"
+    ],
+    [
+     "U7",
+     "2"
+    ],
+    [
+     "U7",
+     "8"
+    ],
+    [
+     "U8",
+     "1"
+    ],
+    [
+     "U8",
+     "2"
+    ],
+    [
+     "U8",
+     "8"
+    ],
+    [
+     "U9",
+     "10"
+    ],
+    [
+     "LED10",
+     "2"
+    ],
+    [
+     "LED11",
+     "2"
+    ],
+    [
+     "LED12",
+     "2"
+    ],
+    [
+     "LED13",
+     "2"
+    ],
+    [
+     "LED14",
+     "2"
+    ],
+    [
+     "LED15",
+     "2"
+    ],
+    [
+     "LED16",
+     "2"
+    ],
+    [
+     "LED17",
+     "2"
+    ],
+    [
+     "CD7",
+     "2"
+    ],
+    [
+     "CD8",
+     "2"
+    ],
+    [
+     "CD9",
+     "2"
+    ],
+    [
+     "CB4",
+     "2"
+    ],
+    [
+     "RIN1",
+     "2"
+    ],
+    [
+     "RIN2",
+     "2"
+    ],
+    [
+     "RIN3",
+     "2"
+    ],
+    [
+     "RIN4",
+     "2"
+    ],
+    [
+     "RIN5",
+     "2"
+    ],
+    [
+     "RIN6",
+     "2"
+    ],
+    [
+     "RIN7",
+     "2"
+    ],
+    [
+     "RIN8",
+     "2"
+    ],
+    [
+     "RIN9",
+     "2"
+    ],
+    [
+     "RIN10",
+     "2"
+    ],
+    [
+     "RIN11",
+     "2"
+    ],
+    [
+     "RIN12",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U7",
+     "16"
+    ],
+    [
+     "U8",
+     "16"
+    ],
+    [
+     "U9",
+     "1"
+    ],
+    [
+     "U9",
+     "20"
+    ],
+    [
+     "CD7",
+     "1"
+    ],
+    [
+     "CD8",
+     "1"
+    ],
+    [
+     "CD9",
+     "1"
+    ],
+    [
+     "CB4",
+     "1"
+    ],
+    [
+     "IN1",
+     "1"
+    ],
+    [
+     "IN1",
+     "2"
+    ],
+    [
+     "IN2",
+     "1"
+    ],
+    [
+     "IN3",
+     "1"
+    ],
+    [
+     "IN4",
+     "1"
+    ],
+    [
+     "IN5",
+     "1"
+    ],
+    [
+     "IN6",
+     "1"
+    ],
+    [
+     "IN7",
+     "1"
+    ],
+    [
+     "IN8",
+     "1"
+    ],
+    [
+     "IN9",
+     "1"
+    ],
+    [
+     "IN10",
+     "1"
+    ],
+    [
+     "IN11",
+     "1"
+    ],
+    [
+     "IN12",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CLK",
+   "pins": [
+    [
+     "U7",
+     "7"
+    ],
+    [
+     "U8",
+     "7"
+    ],
+    [
+     "IN1",
+     "3"
+    ],
+    [
+     "IN1",
+     "4"
+    ],
+    [
+     "RIN1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RST",
+   "pins": [
+    [
+     "U7",
+     "15"
+    ],
+    [
+     "U8",
+     "15"
+    ],
+    [
+     "IN2",
+     "2"
+    ],
+    [
+     "RIN2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A0",
+   "pins": [
+    [
+     "U7",
+     "3"
+    ],
+    [
+     "U9",
+     "2"
+    ],
+    [
+     "R24",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A1",
+   "pins": [
+    [
+     "U7",
+     "4"
+    ],
+    [
+     "U9",
+     "3"
+    ],
+    [
+     "R23",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A2",
+   "pins": [
+    [
+     "U7",
+     "5"
+    ],
+    [
+     "U9",
+     "4"
+    ],
+    [
+     "R22",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A3",
+   "pins": [
+    [
+     "U7",
+     "6"
+    ],
+    [
+     "U9",
+     "5"
+    ],
+    [
+     "R21",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "AI_n",
+   "pins": [
+    [
+     "U7",
+     "9"
+    ],
+    [
+     "U7",
+     "10"
+    ],
+    [
+     "U8",
+     "9"
+    ],
+    [
+     "U8",
+     "10"
+    ],
+    [
+     "IN3",
+     "2"
+    ],
+    [
+     "RIN3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS3",
+   "pins": [
+    [
+     "U7",
+     "11"
+    ],
+    [
+     "U9",
+     "15"
+    ],
+    [
+     "IN4",
+     "2"
+    ],
+    [
+     "RIN4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS2",
+   "pins": [
+    [
+     "U7",
+     "12"
+    ],
+    [
+     "U9",
+     "16"
+    ],
+    [
+     "IN5",
+     "2"
+    ],
+    [
+     "RIN5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS1",
+   "pins": [
+    [
+     "U7",
+     "13"
+    ],
+    [
+     "U9",
+     "17"
+    ],
+    [
+     "IN6",
+     "2"
+    ],
+    [
+     "RIN6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS0",
+   "pins": [
+    [
+     "U7",
+     "14"
+    ],
+    [
+     "U9",
+     "18"
+    ],
+    [
+     "IN7",
+     "2"
+    ],
+    [
+     "RIN7",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A4",
+   "pins": [
+    [
+     "U8",
+     "3"
+    ],
+    [
+     "U9",
+     "6"
+    ],
+    [
+     "R20",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A5",
+   "pins": [
+    [
+     "U8",
+     "4"
+    ],
+    [
+     "U9",
+     "7"
+    ],
+    [
+     "R19",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A6",
+   "pins": [
+    [
+     "U8",
+     "5"
+    ],
+    [
+     "U9",
+     "8"
+    ],
+    [
+     "R18",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A7",
+   "pins": [
+    [
+     "U8",
+     "6"
+    ],
+    [
+     "U9",
+     "9"
+    ],
+    [
+     "R17",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS7",
+   "pins": [
+    [
+     "U8",
+     "11"
+    ],
+    [
+     "U9",
+     "11"
+    ],
+    [
+     "IN8",
+     "2"
+    ],
+    [
+     "RIN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS6",
+   "pins": [
+    [
+     "U8",
+     "12"
+    ],
+    [
+     "U9",
+     "12"
+    ],
+    [
+     "IN9",
+     "2"
+    ],
+    [
+     "RIN9",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS5",
+   "pins": [
+    [
+     "U8",
+     "13"
+    ],
+    [
+     "U9",
+     "13"
+    ],
+    [
+     "IN10",
+     "2"
+    ],
+    [
+     "RIN10",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS4",
+   "pins": [
+    [
+     "U8",
+     "14"
+    ],
+    [
+     "U9",
+     "14"
+    ],
+    [
+     "IN11",
+     "2"
+    ],
+    [
+     "RIN11",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "AO_n",
+   "pins": [
+    [
+     "U9",
+     "19"
+    ],
+    [
+     "IN12",
+     "2"
+    ],
+    [
+     "RIN12",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A7~LED",
+   "pins": [
+    [
+     "R17",
+     "2"
+    ],
+    [
+     "LED10",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A6~LED",
+   "pins": [
+    [
+     "R18",
+     "2"
+    ],
+    [
+     "LED11",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A5~LED",
+   "pins": [
+    [
+     "R19",
+     "2"
+    ],
+    [
+     "LED12",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A4~LED",
+   "pins": [
+    [
+     "R20",
+     "2"
+    ],
+    [
+     "LED13",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A3~LED",
+   "pins": [
+    [
+     "R21",
+     "2"
+    ],
+    [
+     "LED14",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A2~LED",
+   "pins": [
+    [
+     "R22",
+     "2"
+    ],
+    [
+     "LED15",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A1~LED",
+   "pins": [
+    [
+     "R23",
+     "2"
+    ],
+    [
+     "LED16",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A0~LED",
+   "pins": [
+    [
+     "R24",
+     "2"
+    ],
+    [
+     "LED17",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "CLK",
+  "RST",
+  "A0",
+  "A1",
+  "A2",
+  "A3",
+  "AI_n",
+  "BUS3",
+  "BUS2",
+  "BUS1",
+  "BUS0",
+  "A4",
+  "A5",
+  "A6",
+  "A7",
+  "BUS7",
+  "BUS6",
+  "BUS5",
+  "BUS4",
+  "AO_n"
+ ]
+}

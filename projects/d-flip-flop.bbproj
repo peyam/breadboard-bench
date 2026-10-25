@@ -1,0 +1,463 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "D flip-flop",
+ "notes": "A 74HC174 D flip-flop: on each press of CLOCK, Q takes the value of the D switch.",
+ "parts": [
+  {
+   "id": "U1",
+   "type": "74HC174",
+   "x": 200,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "board": "Main"
+   }
+  },
+  {
+   "id": "SD",
+   "type": "SW",
+   "x": 0,
+   "y": 60,
+   "rot": 0,
+   "props": {
+    "label": "D",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "RSD",
+   "type": "R",
+   "x": 0,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down D",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "BC",
+   "type": "BUTTON",
+   "x": 0,
+   "y": 180,
+   "rot": 0,
+   "props": {
+    "label": "CLOCK",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "RBC",
+   "type": "R",
+   "x": 0,
+   "y": 220,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "RD1",
+   "type": "R",
+   "x": 420,
+   "y": 100,
+   "rot": 0,
+   "props": {
+    "value": "1k",
+    "label": "LED resistor (Q)",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "D1",
+   "type": "LED",
+   "x": 420,
+   "y": 140,
+   "rot": 0,
+   "props": {
+    "colour": "red",
+    "label": "Q",
+    "board": "Main"
+   }
+  },
+  {
+   "id": "CU1",
+   "type": "C",
+   "x": 0,
+   "y": 0,
+   "rot": 0,
+   "props": {
+    "value": "100nF",
+    "label": "decoupling U1",
+    "board": "Main"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U1",
+     "8"
+    ],
+    [
+     "RSD",
+     "2"
+    ],
+    [
+     "RBC",
+     "2"
+    ],
+    [
+     "U1",
+     "4"
+    ],
+    [
+     "U1",
+     "6"
+    ],
+    [
+     "U1",
+     "11"
+    ],
+    [
+     "U1",
+     "13"
+    ],
+    [
+     "U1",
+     "14"
+    ],
+    [
+     "D1",
+     "2"
+    ],
+    [
+     "CU1",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U1",
+     "16"
+    ],
+    [
+     "SD",
+     "1"
+    ],
+    [
+     "BC",
+     "1"
+    ],
+    [
+     "BC",
+     "2"
+    ],
+    [
+     "U1",
+     "1"
+    ],
+    [
+     "CU1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "D",
+   "pins": [
+    [
+     "SD",
+     "2"
+    ],
+    [
+     "RSD",
+     "1"
+    ],
+    [
+     "U1",
+     "3"
+    ]
+   ]
+  },
+  {
+   "name": "CLK",
+   "pins": [
+    [
+     "BC",
+     "3"
+    ],
+    [
+     "BC",
+     "4"
+    ],
+    [
+     "RBC",
+     "1"
+    ],
+    [
+     "U1",
+     "9"
+    ]
+   ]
+  },
+  {
+   "name": "Q",
+   "pins": [
+    [
+     "U1",
+     "2"
+    ],
+    [
+     "RD1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "Q~LED",
+   "pins": [
+    [
+     "RD1",
+     "2"
+    ],
+    [
+     "D1",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [
+  {
+   "id": "BB1",
+   "name": "Main",
+   "x": 0,
+   "y": 0,
+   "placements": [
+    {
+     "part": "U1",
+     "row": 1,
+     "hole": "e"
+    },
+    {
+     "part": "BC",
+     "row": 10,
+     "hole": "e"
+    },
+    {
+     "part": "RD1",
+     "legs": {
+      "2": [
+       14,
+       "d"
+      ],
+      "1": [
+       14,
+       "f"
+      ]
+     }
+    },
+    {
+     "part": "SD",
+     "legs": {
+      "2": [
+       3,
+       "a"
+      ],
+      "1": [
+       "B+",
+       3
+      ]
+     }
+    },
+    {
+     "part": "RSD",
+     "legs": {
+      "1": [
+       3,
+       "b"
+      ],
+      "2": [
+       "B-",
+       3
+      ]
+     }
+    },
+    {
+     "part": "RBC",
+     "legs": {
+      "1": [
+       8,
+       "j"
+      ],
+      "2": [
+       "T-",
+       8
+      ]
+     }
+    },
+    {
+     "part": "D1",
+     "legs": {
+      "1": [
+       14,
+       "a"
+      ],
+      "2": [
+       "B-",
+       14
+      ]
+     }
+    },
+    {
+     "part": "CU1",
+     "legs": {
+      "1": [
+       1,
+       "j"
+      ],
+      "2": [
+       "T-",
+       1
+      ]
+     }
+    }
+   ],
+   "wires": [
+    {
+     "a": [
+      1,
+      "a"
+     ],
+     "b": "B+",
+     "colour": "#D7372B"
+    },
+    {
+     "a": [
+      1,
+      "i"
+     ],
+     "b": "T+",
+     "colour": "#D7372B"
+    },
+    {
+     "a": [
+      10,
+      "a"
+     ],
+     "b": "B+",
+     "colour": "#D7372B"
+    },
+    {
+     "a": [
+      10,
+      "j"
+     ],
+     "b": "T+",
+     "colour": "#D7372B"
+    },
+    {
+     "a": [
+      2,
+      "a"
+     ],
+     "b": [
+      14,
+      "j"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      3,
+      "j"
+     ],
+     "b": "T-",
+     "colour": "#222222"
+    },
+    {
+     "a": [
+      4,
+      "a"
+     ],
+     "b": "B-",
+     "colour": "#222222"
+    },
+    {
+     "a": [
+      4,
+      "j"
+     ],
+     "b": "T-",
+     "colour": "#222222"
+    },
+    {
+     "a": [
+      6,
+      "a"
+     ],
+     "b": "B-",
+     "colour": "#222222"
+    },
+    {
+     "a": [
+      6,
+      "j"
+     ],
+     "b": "T-",
+     "colour": "#222222"
+    },
+    {
+     "a": [
+      8,
+      "d"
+     ],
+     "b": "T-",
+     "colour": "#222222"
+    },
+    {
+     "a": [
+      12,
+      "a"
+     ],
+     "b": [
+      8,
+      "i"
+     ],
+     "colour": "#4E9F3D"
+    },
+    {
+     "a": [
+      12,
+      "b"
+     ],
+     "b": [
+      12,
+      "j"
+     ],
+     "colour": "#4E9F3D"
+    }
+   ]
+  }
+ ],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "D",
+  "CLK",
+  "Q"
+ ]
+}

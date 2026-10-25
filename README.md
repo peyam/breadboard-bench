@@ -2,7 +2,18 @@
 
 **Use it now:** https://peyam.github.io/breadboard-bench/ (works offline after the first visit).
 
-Companion software for the book *The Breadboard Computer: build PC-2, the computer that runs itself*. The book's files (emulator, hardware model, EEPROM programmer, kit list) are in [`companion/`](companion/).
+Companion software for the book *The Breadboard Computer: build PC-2, the computer that runs itself*. The book's companion files:
+
+| Folder | What it is |
+|---|---|
+| `tools/pc2kit/` | The book's Python tools: `pc2.py` (PC-2 emulator and assembler), `pc2tools.py` (listings, traces), `prove.py` (checks every program). Run `python3 tools/pc2kit/prove.py`. |
+| `programmer/` | EEPROM programmer sketch for a Nano-compatible board (compatible with Arduino®), with the PC-2 ROM images built in. Derived from Ben Eater's MIT-licensed programmer. |
+| `roms/` | The four PC-2 ROM images as raw 32 KB `.bin` files (three microcode ROMs and the display ROM). |
+| `projects/` | Breadboard Bench projects (`.bbproj`): the whole PC-2, each module, and the small examples. Open them with **Open…** in the app. |
+| `hardware/` | The chip-level model of PC-2: netlist, breadboard layout and checker, simulator and tests (`python3 hardware/test_hw.py`). |
+| `kit/` | The PC-2 kit bill of materials. |
+
+Every Python box in the book also runs in the app's **Code** tab, with nothing to install.
 
 A free, open-source (MIT) digital-logic simulator for learning how computers work, from a single gate to the whole PC-2 of *The Breadboard Computer*. See DESIGN.md.
 

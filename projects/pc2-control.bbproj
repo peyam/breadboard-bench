@@ -1,0 +1,2687 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "PC-2 Control",
+ "notes": "The Control module of PC-2 on its own. The switches IN1, IN2, ... stand in for the signals that come from other modules: CLK_n, RST_n, FC, FZ, OP0, OP1, OP2, OP3.",
+ "parts": [
+  {
+   "id": "U42",
+   "type": "AT28C256",
+   "x": 540,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "microcode ROM 0",
+    "image": {
+     "size": 32768,
+     "fill": 255,
+     "base64": "/df+///////91+23//////3X7Xv//////dft97/////91+33v/////3X7////////df////////913////////3Xr////////dfvv//////91++///////3X/////////de////////91/////////3X/////////df////////91/7///////3X7bf//////dfte//////91+33v/////3X7fe//////dfv///////91/////////3Xf////////dev///////91++///////3X77///////dfv///////917////////3X/////////df////////91/////////3X/v///////dftt//////91+17//////3X7fe//////dft97/////91+////////3X7////////dd////////916////////3X77///////dfvv//////91/////////3Xv////////df////////91/////////3X/////////df+///////91+23//////3X7Xv//////dft97/////91+33v/////3X7////////dfv///////913////////3Xr////////dfvv//////91++///////3X7////////de////////91/////////3X/////////dc="
+    }
+   }
+  },
+  {
+   "id": "U43",
+   "type": "AT28C256",
+   "x": 860,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "microcode ROM 1",
+    "image": {
+     "size": 32768,
+     "fill": 255,
+     "base64": "3+/////////f7////////9/v////////3+//+37////f7//7fP///9/vv///////3+/////////f7/f//////9/v////////3+/7fv/////f7/t8/////9/v////////3+/////////f7////////9/v////////3+/////////f7////////9/v////////3+/////////f7//7fv///9/v//t8////3++////////f7////////9/v9///////3+/////////f7/t+/////9/v+3z/////3++////////f7////////9/v////////3+/////////f7////////9/v////////3+/////////f7////////9/v//t+////3+//+3z////f77///////9/vv///////3+/3///////f7////////9/v+37/////3+/7fP/////f7////////9/v////////3+/////////f7////////9/v////////3+/////////f7////////9/v////////3+//+37////f7//7fP///9/vv///////3++////////f7/f//////9/v////////3+/7fv/////f7/t8/////9/vv///////3+/////////f7////////9/v////////3+8="
+    }
+   }
+  },
+  {
+   "id": "U44",
+   "type": "AT28C256",
+   "x": 1190,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "microcode ROM 2",
+    "image": {
+     "size": 32768,
+     "fill": 255,
+     "base64": "/////f39/f3////9/f39/f////39/f39//////39/f3//////f39/f///f39/f39///9/f39/f3///39/f39/f///f39/f39/////f39/f3////9/f39/f///f39/f39///8/f39/f3///39/f39/f///f39/f39///9/f39/f3////9/f39/f////39/f39/////f39/f3//////f39/f/////9/f39///9/f39/f3///39/f39/f///f39/f39///9/f39/f3////9/f39/f////39/f39///9/f39/f3///z9/f39/f///f39/f39///9/f39/f3///39/f39/f////39/f39/////f39/f3////9/f39/f/////9/f39//////39/f3///39/f39/f///f39/f39///9/f39/f3///39/f39/f////39/f39/////f39/f3///39/f39/f///P39/f39///9/f39/f3///39/f39/f///f39/f39/////f39/f3////9/f39/f////39/f39//////39/f3//////f39/f///f39/f39///9/f39/f3///39/f39/f///f39/f39/////f39/f3////9/f39/f///f39/f39///8/f39/f3///39/f39/f///f39/f39///9/f39/f0="
+    }
+   }
+  },
+  {
+   "id": "U45",
+   "type": "74HCT161",
+   "x": 540,
+   "y": 510,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step counter"
+   }
+  },
+  {
+   "id": "U46",
+   "type": "74HCT174",
+   "x": 860,
+   "y": 510,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "control address latch"
+   }
+  },
+  {
+   "id": "U47",
+   "type": "74HCT04",
+   "x": 1190,
+   "y": 510,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "active-high copies of SU and CE"
+   }
+  },
+  {
+   "id": "U48",
+   "type": "74HCT138",
+   "x": 860,
+   "y": 810,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step display decoder"
+   }
+  },
+  {
+   "id": "R92",
+   "type": "R",
+   "x": 60,
+   "y": 1160,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (step T0)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED69",
+   "type": "LED",
+   "x": 360,
+   "y": 1170,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step T0",
+    "colour": "green",
+    "resistor": "R92"
+   }
+  },
+  {
+   "id": "R93",
+   "type": "R",
+   "x": 590,
+   "y": 1160,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (step T1)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED70",
+   "type": "LED",
+   "x": 900,
+   "y": 1170,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step T1",
+    "colour": "green",
+    "resistor": "R93"
+   }
+  },
+  {
+   "id": "R94",
+   "type": "R",
+   "x": 1120,
+   "y": 1160,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (step T2)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED71",
+   "type": "LED",
+   "x": 110,
+   "y": 1270,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step T2",
+    "colour": "green",
+    "resistor": "R94"
+   }
+  },
+  {
+   "id": "R95",
+   "type": "R",
+   "x": 340,
+   "y": 1260,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (step T3)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED72",
+   "type": "LED",
+   "x": 640,
+   "y": 1270,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step T3",
+    "colour": "green",
+    "resistor": "R95"
+   }
+  },
+  {
+   "id": "R96",
+   "type": "R",
+   "x": 870,
+   "y": 1260,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (step T4)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED73",
+   "type": "LED",
+   "x": 1180,
+   "y": 1270,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step T4",
+    "colour": "green",
+    "resistor": "R96"
+   }
+  },
+  {
+   "id": "R97",
+   "type": "R",
+   "x": 60,
+   "y": 1360,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (step T5)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED74",
+   "type": "LED",
+   "x": 360,
+   "y": 1370,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step T5",
+    "colour": "green",
+    "resistor": "R97"
+   }
+  },
+  {
+   "id": "R98",
+   "type": "R",
+   "x": 590,
+   "y": 1360,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (step T6)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED75",
+   "type": "LED",
+   "x": 900,
+   "y": 1370,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step T6",
+    "colour": "green",
+    "resistor": "R98"
+   }
+  },
+  {
+   "id": "R99",
+   "type": "R",
+   "x": 1120,
+   "y": 1360,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (step T7)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED76",
+   "type": "LED",
+   "x": 110,
+   "y": 1470,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "step T7",
+    "colour": "green",
+    "resistor": "R99"
+   }
+  },
+  {
+   "id": "R100",
+   "type": "R",
+   "x": 340,
+   "y": 1460,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control HLT)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED77",
+   "type": "LED",
+   "x": 610,
+   "y": 1470,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control HLT",
+    "colour": "green",
+    "resistor": "R100"
+   }
+  },
+  {
+   "id": "R101",
+   "type": "R",
+   "x": 820,
+   "y": 1460,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control MI)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED78",
+   "type": "LED",
+   "x": 1080,
+   "y": 1470,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control MI",
+    "colour": "green",
+    "resistor": "R101"
+   }
+  },
+  {
+   "id": "R102",
+   "type": "R",
+   "x": 60,
+   "y": 1560,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control RI)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED79",
+   "type": "LED",
+   "x": 310,
+   "y": 1570,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control RI",
+    "colour": "green",
+    "resistor": "R102"
+   }
+  },
+  {
+   "id": "R103",
+   "type": "R",
+   "x": 520,
+   "y": 1560,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control RO)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED80",
+   "type": "LED",
+   "x": 780,
+   "y": 1570,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control RO",
+    "colour": "green",
+    "resistor": "R103"
+   }
+  },
+  {
+   "id": "R104",
+   "type": "R",
+   "x": 990,
+   "y": 1560,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control IO)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED81",
+   "type": "LED",
+   "x": 1240,
+   "y": 1570,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control IO",
+    "colour": "green",
+    "resistor": "R104"
+   }
+  },
+  {
+   "id": "R105",
+   "type": "R",
+   "x": 60,
+   "y": 1660,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control II)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED82",
+   "type": "LED",
+   "x": 310,
+   "y": 1670,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control II",
+    "colour": "green",
+    "resistor": "R105"
+   }
+  },
+  {
+   "id": "R106",
+   "type": "R",
+   "x": 520,
+   "y": 1660,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control AI)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED83",
+   "type": "LED",
+   "x": 780,
+   "y": 1670,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control AI",
+    "colour": "green",
+    "resistor": "R106"
+   }
+  },
+  {
+   "id": "R107",
+   "type": "R",
+   "x": 990,
+   "y": 1660,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control AO)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED84",
+   "type": "LED",
+   "x": 1240,
+   "y": 1670,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control AO",
+    "colour": "green",
+    "resistor": "R107"
+   }
+  },
+  {
+   "id": "R108",
+   "type": "R",
+   "x": 60,
+   "y": 1760,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control EO)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED85",
+   "type": "LED",
+   "x": 310,
+   "y": 1770,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control EO",
+    "colour": "green",
+    "resistor": "R108"
+   }
+  },
+  {
+   "id": "R109",
+   "type": "R",
+   "x": 520,
+   "y": 1760,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control SU)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED86",
+   "type": "LED",
+   "x": 780,
+   "y": 1770,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control SU",
+    "colour": "green",
+    "resistor": "R109"
+   }
+  },
+  {
+   "id": "R110",
+   "type": "R",
+   "x": 990,
+   "y": 1760,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control BI)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED87",
+   "type": "LED",
+   "x": 1240,
+   "y": 1770,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control BI",
+    "colour": "green",
+    "resistor": "R110"
+   }
+  },
+  {
+   "id": "R111",
+   "type": "R",
+   "x": 60,
+   "y": 1860,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control OI)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED88",
+   "type": "LED",
+   "x": 310,
+   "y": 1870,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control OI",
+    "colour": "green",
+    "resistor": "R111"
+   }
+  },
+  {
+   "id": "R112",
+   "type": "R",
+   "x": 520,
+   "y": 1860,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control CE)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED89",
+   "type": "LED",
+   "x": 780,
+   "y": 1870,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control CE",
+    "colour": "green",
+    "resistor": "R112"
+   }
+  },
+  {
+   "id": "R113",
+   "type": "R",
+   "x": 990,
+   "y": 1860,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control CO)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED90",
+   "type": "LED",
+   "x": 1240,
+   "y": 1870,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control CO",
+    "colour": "green",
+    "resistor": "R113"
+   }
+  },
+  {
+   "id": "R114",
+   "type": "R",
+   "x": 60,
+   "y": 1960,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control J)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED91",
+   "type": "LED",
+   "x": 300,
+   "y": 1970,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control J",
+    "colour": "green",
+    "resistor": "R114"
+   }
+  },
+  {
+   "id": "R115",
+   "type": "R",
+   "x": 500,
+   "y": 1960,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "LED resistor (control FI)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED92",
+   "type": "LED",
+   "x": 760,
+   "y": 1970,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "control FI",
+    "colour": "green",
+    "resistor": "R115"
+   }
+  },
+  {
+   "id": "R116",
+   "type": "R",
+   "x": 970,
+   "y": 1960,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (control XO)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED93",
+   "type": "LED",
+   "x": 1230,
+   "y": 1970,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "control XO",
+    "colour": "green",
+    "resistor": "R116"
+   }
+  },
+  {
+   "id": "R117",
+   "type": "R",
+   "x": 60,
+   "y": 2060,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "LED resistor (control SR)",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "LED94",
+   "type": "LED",
+   "x": 310,
+   "y": 2070,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "control SR",
+    "colour": "green",
+    "resistor": "R117"
+   }
+  },
+  {
+   "id": "CD42",
+   "type": "C",
+   "x": 520,
+   "y": 2070,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "decoupling U42",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD43",
+   "type": "C",
+   "x": 700,
+   "y": 2070,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "decoupling U43",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD44",
+   "type": "C",
+   "x": 880,
+   "y": 2070,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "decoupling U44",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD45",
+   "type": "C",
+   "x": 1060,
+   "y": 2070,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "decoupling U45",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD46",
+   "type": "C",
+   "x": 1240,
+   "y": 2070,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "decoupling U46",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD47",
+   "type": "C",
+   "x": 60,
+   "y": 2170,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "decoupling U47",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD48",
+   "type": "C",
+   "x": 240,
+   "y": 2170,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "decoupling U48",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CB16",
+   "type": "C",
+   "x": 420,
+   "y": 2170,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control sequencer",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "CB17",
+   "type": "C",
+   "x": 600,
+   "y": 2170,
+   "rot": 0,
+   "props": {
+    "module": "Control",
+    "board": "Control ROMs",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "IN1",
+   "type": "BUTTON",
+   "x": 60,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "CLK_n",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN1",
+   "type": "R",
+   "x": 270,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN2",
+   "type": "SW",
+   "x": 60,
+   "y": 130,
+   "rot": 0,
+   "props": {
+    "label": "RST_n",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN2",
+   "type": "R",
+   "x": 270,
+   "y": 120,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN3",
+   "type": "SW",
+   "x": 60,
+   "y": 200,
+   "rot": 0,
+   "props": {
+    "label": "FC",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN3",
+   "type": "R",
+   "x": 230,
+   "y": 190,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN4",
+   "type": "SW",
+   "x": 60,
+   "y": 270,
+   "rot": 0,
+   "props": {
+    "label": "FZ",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN4",
+   "type": "R",
+   "x": 230,
+   "y": 260,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN5",
+   "type": "SW",
+   "x": 60,
+   "y": 340,
+   "rot": 0,
+   "props": {
+    "label": "OP0",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN5",
+   "type": "R",
+   "x": 250,
+   "y": 330,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN6",
+   "type": "SW",
+   "x": 60,
+   "y": 410,
+   "rot": 0,
+   "props": {
+    "label": "OP1",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN6",
+   "type": "R",
+   "x": 250,
+   "y": 400,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN7",
+   "type": "SW",
+   "x": 60,
+   "y": 480,
+   "rot": 0,
+   "props": {
+    "label": "OP2",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN7",
+   "type": "R",
+   "x": 250,
+   "y": 470,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN8",
+   "type": "SW",
+   "x": 60,
+   "y": 550,
+   "rot": 0,
+   "props": {
+    "label": "OP3",
+    "module": "Control",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN8",
+   "type": "R",
+   "x": 250,
+   "y": 540,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Control",
+    "role": "input"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U42",
+     "1"
+    ],
+    [
+     "U42",
+     "2"
+    ],
+    [
+     "U42",
+     "14"
+    ],
+    [
+     "U42",
+     "20"
+    ],
+    [
+     "U42",
+     "21"
+    ],
+    [
+     "U42",
+     "22"
+    ],
+    [
+     "U42",
+     "23"
+    ],
+    [
+     "U42",
+     "24"
+    ],
+    [
+     "U42",
+     "26"
+    ],
+    [
+     "U43",
+     "1"
+    ],
+    [
+     "U43",
+     "2"
+    ],
+    [
+     "U43",
+     "14"
+    ],
+    [
+     "U43",
+     "20"
+    ],
+    [
+     "U43",
+     "21"
+    ],
+    [
+     "U43",
+     "22"
+    ],
+    [
+     "U43",
+     "23"
+    ],
+    [
+     "U43",
+     "24"
+    ],
+    [
+     "U43",
+     "26"
+    ],
+    [
+     "U44",
+     "1"
+    ],
+    [
+     "U44",
+     "2"
+    ],
+    [
+     "U44",
+     "14"
+    ],
+    [
+     "U44",
+     "20"
+    ],
+    [
+     "U44",
+     "21"
+    ],
+    [
+     "U44",
+     "22"
+    ],
+    [
+     "U44",
+     "23"
+    ],
+    [
+     "U44",
+     "24"
+    ],
+    [
+     "U44",
+     "26"
+    ],
+    [
+     "U45",
+     "3"
+    ],
+    [
+     "U45",
+     "4"
+    ],
+    [
+     "U45",
+     "5"
+    ],
+    [
+     "U45",
+     "6"
+    ],
+    [
+     "U45",
+     "8"
+    ],
+    [
+     "U46",
+     "8"
+    ],
+    [
+     "U47",
+     "5"
+    ],
+    [
+     "U47",
+     "7"
+    ],
+    [
+     "U47",
+     "9"
+    ],
+    [
+     "U47",
+     "11"
+    ],
+    [
+     "U47",
+     "13"
+    ],
+    [
+     "U48",
+     "4"
+    ],
+    [
+     "U48",
+     "5"
+    ],
+    [
+     "U48",
+     "8"
+    ],
+    [
+     "CD42",
+     "2"
+    ],
+    [
+     "CD43",
+     "2"
+    ],
+    [
+     "CD44",
+     "2"
+    ],
+    [
+     "CD45",
+     "2"
+    ],
+    [
+     "CD46",
+     "2"
+    ],
+    [
+     "CD47",
+     "2"
+    ],
+    [
+     "CD48",
+     "2"
+    ],
+    [
+     "CB16",
+     "2"
+    ],
+    [
+     "CB17",
+     "2"
+    ],
+    [
+     "RIN1",
+     "2"
+    ],
+    [
+     "RIN2",
+     "2"
+    ],
+    [
+     "RIN3",
+     "2"
+    ],
+    [
+     "RIN4",
+     "2"
+    ],
+    [
+     "RIN5",
+     "2"
+    ],
+    [
+     "RIN6",
+     "2"
+    ],
+    [
+     "RIN7",
+     "2"
+    ],
+    [
+     "RIN8",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U42",
+     "27"
+    ],
+    [
+     "U42",
+     "28"
+    ],
+    [
+     "U43",
+     "27"
+    ],
+    [
+     "U43",
+     "28"
+    ],
+    [
+     "U44",
+     "27"
+    ],
+    [
+     "U44",
+     "28"
+    ],
+    [
+     "U45",
+     "7"
+    ],
+    [
+     "U45",
+     "10"
+    ],
+    [
+     "U45",
+     "16"
+    ],
+    [
+     "U46",
+     "16"
+    ],
+    [
+     "U47",
+     "14"
+    ],
+    [
+     "U48",
+     "6"
+    ],
+    [
+     "U48",
+     "16"
+    ],
+    [
+     "R92",
+     "1"
+    ],
+    [
+     "R93",
+     "1"
+    ],
+    [
+     "R94",
+     "1"
+    ],
+    [
+     "R95",
+     "1"
+    ],
+    [
+     "R96",
+     "1"
+    ],
+    [
+     "R97",
+     "1"
+    ],
+    [
+     "R98",
+     "1"
+    ],
+    [
+     "R99",
+     "1"
+    ],
+    [
+     "R100",
+     "1"
+    ],
+    [
+     "R101",
+     "1"
+    ],
+    [
+     "R102",
+     "1"
+    ],
+    [
+     "R103",
+     "1"
+    ],
+    [
+     "R104",
+     "1"
+    ],
+    [
+     "R105",
+     "1"
+    ],
+    [
+     "R106",
+     "1"
+    ],
+    [
+     "R107",
+     "1"
+    ],
+    [
+     "R108",
+     "1"
+    ],
+    [
+     "R109",
+     "1"
+    ],
+    [
+     "R110",
+     "1"
+    ],
+    [
+     "R111",
+     "1"
+    ],
+    [
+     "R112",
+     "1"
+    ],
+    [
+     "R113",
+     "1"
+    ],
+    [
+     "R114",
+     "1"
+    ],
+    [
+     "R115",
+     "1"
+    ],
+    [
+     "R116",
+     "1"
+    ],
+    [
+     "R117",
+     "1"
+    ],
+    [
+     "CD42",
+     "1"
+    ],
+    [
+     "CD43",
+     "1"
+    ],
+    [
+     "CD44",
+     "1"
+    ],
+    [
+     "CD45",
+     "1"
+    ],
+    [
+     "CD46",
+     "1"
+    ],
+    [
+     "CD47",
+     "1"
+    ],
+    [
+     "CD48",
+     "1"
+    ],
+    [
+     "CB16",
+     "1"
+    ],
+    [
+     "CB17",
+     "1"
+    ],
+    [
+     "IN1",
+     "1"
+    ],
+    [
+     "IN1",
+     "2"
+    ],
+    [
+     "IN2",
+     "1"
+    ],
+    [
+     "IN3",
+     "1"
+    ],
+    [
+     "IN4",
+     "1"
+    ],
+    [
+     "IN5",
+     "1"
+    ],
+    [
+     "IN6",
+     "1"
+    ],
+    [
+     "IN7",
+     "1"
+    ],
+    [
+     "IN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CLK_n",
+   "pins": [
+    [
+     "U45",
+     "2"
+    ],
+    [
+     "U46",
+     "9"
+    ],
+    [
+     "IN1",
+     "3"
+    ],
+    [
+     "IN1",
+     "4"
+    ],
+    [
+     "RIN1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RST_n",
+   "pins": [
+    [
+     "U45",
+     "1"
+    ],
+    [
+     "U46",
+     "1"
+    ],
+    [
+     "IN2",
+     "2"
+    ],
+    [
+     "RIN2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "HLT_n",
+   "pins": [
+    [
+     "U42",
+     "11"
+    ],
+    [
+     "LED77",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "AI_n",
+   "pins": [
+    [
+     "U42",
+     "18"
+    ],
+    [
+     "LED83",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "AO_n",
+   "pins": [
+    [
+     "U42",
+     "19"
+    ],
+    [
+     "LED84",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "BI_n",
+   "pins": [
+    [
+     "U43",
+     "13"
+    ],
+    [
+     "LED87",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "SU",
+   "pins": [
+    [
+     "U47",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "EO_n",
+   "pins": [
+    [
+     "U43",
+     "11"
+    ],
+    [
+     "LED85",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "FC",
+   "pins": [
+    [
+     "U46",
+     "14"
+    ],
+    [
+     "IN3",
+     "2"
+    ],
+    [
+     "RIN3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "FZ",
+   "pins": [
+    [
+     "U46",
+     "13"
+    ],
+    [
+     "IN4",
+     "2"
+    ],
+    [
+     "RIN4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "FI_n",
+   "pins": [
+    [
+     "U43",
+     "19"
+    ],
+    [
+     "LED92",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "CE",
+   "pins": [
+    [
+     "U47",
+     "4"
+    ]
+   ]
+  },
+  {
+   "name": "J_n",
+   "pins": [
+    [
+     "U43",
+     "18"
+    ],
+    [
+     "LED91",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "CO_n",
+   "pins": [
+    [
+     "U43",
+     "17"
+    ],
+    [
+     "LED90",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "MI_n",
+   "pins": [
+    [
+     "U42",
+     "12"
+    ],
+    [
+     "LED78",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "RO_n",
+   "pins": [
+    [
+     "U42",
+     "15"
+    ],
+    [
+     "LED80",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "RI_n",
+   "pins": [
+    [
+     "U42",
+     "13"
+    ],
+    [
+     "LED79",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "II_n",
+   "pins": [
+    [
+     "U42",
+     "17"
+    ],
+    [
+     "LED82",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "OP0",
+   "pins": [
+    [
+     "U46",
+     "3"
+    ],
+    [
+     "IN5",
+     "2"
+    ],
+    [
+     "RIN5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "OP1",
+   "pins": [
+    [
+     "U46",
+     "4"
+    ],
+    [
+     "IN6",
+     "2"
+    ],
+    [
+     "RIN6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "OP2",
+   "pins": [
+    [
+     "U46",
+     "6"
+    ],
+    [
+     "IN7",
+     "2"
+    ],
+    [
+     "RIN7",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "OP3",
+   "pins": [
+    [
+     "U46",
+     "11"
+    ],
+    [
+     "IN8",
+     "2"
+    ],
+    [
+     "RIN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "IO_n",
+   "pins": [
+    [
+     "U42",
+     "16"
+    ],
+    [
+     "LED81",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "OI_n",
+   "pins": [
+    [
+     "U43",
+     "15"
+    ],
+    [
+     "LED88",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "XO_n",
+   "pins": [
+    [
+     "U44",
+     "11"
+    ],
+    [
+     "LED93",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "LZ",
+   "pins": [
+    [
+     "U42",
+     "3"
+    ],
+    [
+     "U43",
+     "3"
+    ],
+    [
+     "U44",
+     "3"
+    ],
+    [
+     "U46",
+     "12"
+    ]
+   ]
+  },
+  {
+   "name": "LOP3",
+   "pins": [
+    [
+     "U42",
+     "4"
+    ],
+    [
+     "U43",
+     "4"
+    ],
+    [
+     "U44",
+     "4"
+    ],
+    [
+     "U46",
+     "10"
+    ]
+   ]
+  },
+  {
+   "name": "LOP2",
+   "pins": [
+    [
+     "U42",
+     "5"
+    ],
+    [
+     "U43",
+     "5"
+    ],
+    [
+     "U44",
+     "5"
+    ],
+    [
+     "U46",
+     "7"
+    ]
+   ]
+  },
+  {
+   "name": "LOP1",
+   "pins": [
+    [
+     "U42",
+     "6"
+    ],
+    [
+     "U43",
+     "6"
+    ],
+    [
+     "U44",
+     "6"
+    ],
+    [
+     "U46",
+     "5"
+    ]
+   ]
+  },
+  {
+   "name": "LOP0",
+   "pins": [
+    [
+     "U42",
+     "7"
+    ],
+    [
+     "U43",
+     "7"
+    ],
+    [
+     "U44",
+     "7"
+    ],
+    [
+     "U46",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEP2",
+   "pins": [
+    [
+     "U42",
+     "8"
+    ],
+    [
+     "U43",
+     "8"
+    ],
+    [
+     "U44",
+     "8"
+    ],
+    [
+     "U45",
+     "12"
+    ],
+    [
+     "U48",
+     "3"
+    ]
+   ]
+  },
+  {
+   "name": "STEP1",
+   "pins": [
+    [
+     "U42",
+     "9"
+    ],
+    [
+     "U43",
+     "9"
+    ],
+    [
+     "U44",
+     "9"
+    ],
+    [
+     "U45",
+     "13"
+    ],
+    [
+     "U48",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEP0",
+   "pins": [
+    [
+     "U42",
+     "10"
+    ],
+    [
+     "U43",
+     "10"
+    ],
+    [
+     "U44",
+     "10"
+    ],
+    [
+     "U45",
+     "14"
+    ],
+    [
+     "U48",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "LC",
+   "pins": [
+    [
+     "U42",
+     "25"
+    ],
+    [
+     "U43",
+     "25"
+    ],
+    [
+     "U44",
+     "25"
+    ],
+    [
+     "U46",
+     "15"
+    ]
+   ]
+  },
+  {
+   "name": "SU_n",
+   "pins": [
+    [
+     "U43",
+     "12"
+    ],
+    [
+     "U47",
+     "1"
+    ],
+    [
+     "LED86",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "CE_n",
+   "pins": [
+    [
+     "U43",
+     "16"
+    ],
+    [
+     "U47",
+     "3"
+    ],
+    [
+     "LED89",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "SR_n",
+   "pins": [
+    [
+     "U44",
+     "12"
+    ],
+    [
+     "U45",
+     "9"
+    ],
+    [
+     "LED94",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY7_n",
+   "pins": [
+    [
+     "U48",
+     "7"
+    ],
+    [
+     "LED76",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY6_n",
+   "pins": [
+    [
+     "U48",
+     "9"
+    ],
+    [
+     "LED75",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY5_n",
+   "pins": [
+    [
+     "U48",
+     "10"
+    ],
+    [
+     "LED74",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY4_n",
+   "pins": [
+    [
+     "U48",
+     "11"
+    ],
+    [
+     "LED73",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY3_n",
+   "pins": [
+    [
+     "U48",
+     "12"
+    ],
+    [
+     "LED72",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY2_n",
+   "pins": [
+    [
+     "U48",
+     "13"
+    ],
+    [
+     "LED71",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY1_n",
+   "pins": [
+    [
+     "U48",
+     "14"
+    ],
+    [
+     "LED70",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY0_n",
+   "pins": [
+    [
+     "U48",
+     "15"
+    ],
+    [
+     "LED69",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY0_n~LED",
+   "pins": [
+    [
+     "R92",
+     "2"
+    ],
+    [
+     "LED69",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY1_n~LED",
+   "pins": [
+    [
+     "R93",
+     "2"
+    ],
+    [
+     "LED70",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY2_n~LED",
+   "pins": [
+    [
+     "R94",
+     "2"
+    ],
+    [
+     "LED71",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY3_n~LED",
+   "pins": [
+    [
+     "R95",
+     "2"
+    ],
+    [
+     "LED72",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY4_n~LED",
+   "pins": [
+    [
+     "R96",
+     "2"
+    ],
+    [
+     "LED73",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY5_n~LED",
+   "pins": [
+    [
+     "R97",
+     "2"
+    ],
+    [
+     "LED74",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY6_n~LED",
+   "pins": [
+    [
+     "R98",
+     "2"
+    ],
+    [
+     "LED75",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "STEPY7_n~LED",
+   "pins": [
+    [
+     "R99",
+     "2"
+    ],
+    [
+     "LED76",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "HLT_n~LED",
+   "pins": [
+    [
+     "R100",
+     "2"
+    ],
+    [
+     "LED77",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "MI_n~LED",
+   "pins": [
+    [
+     "R101",
+     "2"
+    ],
+    [
+     "LED78",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RI_n~LED",
+   "pins": [
+    [
+     "R102",
+     "2"
+    ],
+    [
+     "LED79",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RO_n~LED",
+   "pins": [
+    [
+     "R103",
+     "2"
+    ],
+    [
+     "LED80",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "IO_n~LED",
+   "pins": [
+    [
+     "R104",
+     "2"
+    ],
+    [
+     "LED81",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "II_n~LED",
+   "pins": [
+    [
+     "R105",
+     "2"
+    ],
+    [
+     "LED82",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "AI_n~LED",
+   "pins": [
+    [
+     "R106",
+     "2"
+    ],
+    [
+     "LED83",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "AO_n~LED",
+   "pins": [
+    [
+     "R107",
+     "2"
+    ],
+    [
+     "LED84",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "EO_n~LED",
+   "pins": [
+    [
+     "R108",
+     "2"
+    ],
+    [
+     "LED85",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SU_n~LED",
+   "pins": [
+    [
+     "R109",
+     "2"
+    ],
+    [
+     "LED86",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BI_n~LED",
+   "pins": [
+    [
+     "R110",
+     "2"
+    ],
+    [
+     "LED87",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "OI_n~LED",
+   "pins": [
+    [
+     "R111",
+     "2"
+    ],
+    [
+     "LED88",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CE_n~LED",
+   "pins": [
+    [
+     "R112",
+     "2"
+    ],
+    [
+     "LED89",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CO_n~LED",
+   "pins": [
+    [
+     "R113",
+     "2"
+    ],
+    [
+     "LED90",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "J_n~LED",
+   "pins": [
+    [
+     "R114",
+     "2"
+    ],
+    [
+     "LED91",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "FI_n~LED",
+   "pins": [
+    [
+     "R115",
+     "2"
+    ],
+    [
+     "LED92",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "XO_n~LED",
+   "pins": [
+    [
+     "R116",
+     "2"
+    ],
+    [
+     "LED93",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR_n~LED",
+   "pins": [
+    [
+     "R117",
+     "2"
+    ],
+    [
+     "LED94",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "CLK_n",
+  "RST_n",
+  "HLT_n",
+  "AI_n",
+  "AO_n",
+  "BI_n",
+  "SU",
+  "EO_n",
+  "FC",
+  "FZ",
+  "FI_n",
+  "CE",
+  "J_n",
+  "CO_n",
+  "MI_n",
+  "RO_n",
+  "RI_n",
+  "II_n",
+  "OP0",
+  "OP1",
+  "OP2",
+  "OP3",
+  "IO_n",
+  "OI_n"
+ ]
+}

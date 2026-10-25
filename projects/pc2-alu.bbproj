@@ -1,0 +1,2229 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "PC-2 ALU",
+ "notes": "The ALU module of PC-2 on its own. The switches IN1, IN2, ... stand in for the signals that come from other modules: A0, A1, A2, A3, BUS3, BUS2, BUS1, BUS0, A4, A5, A6, A7, BUS7, BUS6, BUS5, BUS4, B0, B1, B2, B3, B4, B5, B6, B7, SU, EO_n.",
+ "parts": [
+  {
+   "id": "U12",
+   "type": "74HCT86",
+   "x": 1390,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "invert B bits 0-3 when subtracting"
+   }
+  },
+  {
+   "id": "U13",
+   "type": "74HCT86",
+   "x": 1690,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "invert B bits 4-7 when subtracting"
+   }
+  },
+  {
+   "id": "U14",
+   "type": "74HCT283",
+   "x": 1990,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "adder bits 0-3"
+   }
+  },
+  {
+   "id": "U15",
+   "type": "74HCT283",
+   "x": 1990,
+   "y": 330,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "adder bits 4-7"
+   }
+  },
+  {
+   "id": "U16",
+   "type": "74HCT245",
+   "x": 1390,
+   "y": 390,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "ALU result to bus"
+   }
+  },
+  {
+   "id": "R33",
+   "type": "R",
+   "x": 50,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "LED resistor (sum bit 7)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED26",
+   "type": "LED",
+   "x": 290,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "sum bit 7",
+    "colour": "red",
+    "resistor": "R33"
+   }
+  },
+  {
+   "id": "R34",
+   "type": "R",
+   "x": 480,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "LED resistor (sum bit 6)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED27",
+   "type": "LED",
+   "x": 720,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "sum bit 6",
+    "colour": "red",
+    "resistor": "R34"
+   }
+  },
+  {
+   "id": "R35",
+   "type": "R",
+   "x": 910,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "LED resistor (sum bit 5)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED28",
+   "type": "LED",
+   "x": 1150,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "sum bit 5",
+    "colour": "red",
+    "resistor": "R35"
+   }
+  },
+  {
+   "id": "R36",
+   "type": "R",
+   "x": 1340,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "LED resistor (sum bit 4)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED29",
+   "type": "LED",
+   "x": 1580,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "sum bit 4",
+    "colour": "red",
+    "resistor": "R36"
+   }
+  },
+  {
+   "id": "R37",
+   "type": "R",
+   "x": 1770,
+   "y": 780,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "LED resistor (sum bit 3)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED30",
+   "type": "LED",
+   "x": 2010,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "sum bit 3",
+    "colour": "red",
+    "resistor": "R37"
+   }
+  },
+  {
+   "id": "R38",
+   "type": "R",
+   "x": 50,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "LED resistor (sum bit 2)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED31",
+   "type": "LED",
+   "x": 290,
+   "y": 890,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "sum bit 2",
+    "colour": "red",
+    "resistor": "R38"
+   }
+  },
+  {
+   "id": "R39",
+   "type": "R",
+   "x": 480,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "LED resistor (sum bit 1)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED32",
+   "type": "LED",
+   "x": 720,
+   "y": 890,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "sum bit 1",
+    "colour": "red",
+    "resistor": "R39"
+   }
+  },
+  {
+   "id": "R40",
+   "type": "R",
+   "x": 910,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "LED resistor (sum bit 0)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED33",
+   "type": "LED",
+   "x": 1150,
+   "y": 890,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "sum bit 0",
+    "colour": "red",
+    "resistor": "R40"
+   }
+  },
+  {
+   "id": "CD12",
+   "type": "C",
+   "x": 1350,
+   "y": 890,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "decoupling U12",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD13",
+   "type": "C",
+   "x": 1530,
+   "y": 890,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "decoupling U13",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD14",
+   "type": "C",
+   "x": 1710,
+   "y": 890,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "decoupling U14",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD15",
+   "type": "C",
+   "x": 1890,
+   "y": 890,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "decoupling U15",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD16",
+   "type": "C",
+   "x": 2070,
+   "y": 890,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "decoupling U16",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CB6",
+   "type": "C",
+   "x": 60,
+   "y": 990,
+   "rot": 0,
+   "props": {
+    "module": "ALU",
+    "board": "ALU",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "IN1",
+   "type": "SW",
+   "x": 60,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "A0",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN1",
+   "type": "R",
+   "x": 230,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN2",
+   "type": "SW",
+   "x": 60,
+   "y": 110,
+   "rot": 0,
+   "props": {
+    "label": "A1",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN2",
+   "type": "R",
+   "x": 230,
+   "y": 90,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN3",
+   "type": "SW",
+   "x": 60,
+   "y": 180,
+   "rot": 0,
+   "props": {
+    "label": "A2",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN3",
+   "type": "R",
+   "x": 230,
+   "y": 160,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN4",
+   "type": "SW",
+   "x": 60,
+   "y": 250,
+   "rot": 0,
+   "props": {
+    "label": "A3",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN4",
+   "type": "R",
+   "x": 230,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN5",
+   "type": "SW",
+   "x": 60,
+   "y": 320,
+   "rot": 0,
+   "props": {
+    "label": "BUS3",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN5",
+   "type": "R",
+   "x": 260,
+   "y": 300,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN6",
+   "type": "SW",
+   "x": 60,
+   "y": 390,
+   "rot": 0,
+   "props": {
+    "label": "BUS2",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN6",
+   "type": "R",
+   "x": 260,
+   "y": 370,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN7",
+   "type": "SW",
+   "x": 60,
+   "y": 460,
+   "rot": 0,
+   "props": {
+    "label": "BUS1",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN7",
+   "type": "R",
+   "x": 260,
+   "y": 440,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN8",
+   "type": "SW",
+   "x": 60,
+   "y": 530,
+   "rot": 0,
+   "props": {
+    "label": "BUS0",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN8",
+   "type": "R",
+   "x": 260,
+   "y": 510,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN9",
+   "type": "SW",
+   "x": 60,
+   "y": 600,
+   "rot": 0,
+   "props": {
+    "label": "A4",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN9",
+   "type": "R",
+   "x": 230,
+   "y": 580,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN10",
+   "type": "SW",
+   "x": 60,
+   "y": 670,
+   "rot": 0,
+   "props": {
+    "label": "A5",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN10",
+   "type": "R",
+   "x": 230,
+   "y": 650,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN11",
+   "type": "SW",
+   "x": 490,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "A6",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN11",
+   "type": "R",
+   "x": 670,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN12",
+   "type": "SW",
+   "x": 490,
+   "y": 110,
+   "rot": 0,
+   "props": {
+    "label": "A7",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN12",
+   "type": "R",
+   "x": 670,
+   "y": 90,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN13",
+   "type": "SW",
+   "x": 490,
+   "y": 180,
+   "rot": 0,
+   "props": {
+    "label": "BUS7",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN13",
+   "type": "R",
+   "x": 690,
+   "y": 160,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN14",
+   "type": "SW",
+   "x": 490,
+   "y": 250,
+   "rot": 0,
+   "props": {
+    "label": "BUS6",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN14",
+   "type": "R",
+   "x": 690,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN15",
+   "type": "SW",
+   "x": 490,
+   "y": 320,
+   "rot": 0,
+   "props": {
+    "label": "BUS5",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN15",
+   "type": "R",
+   "x": 690,
+   "y": 300,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN16",
+   "type": "SW",
+   "x": 490,
+   "y": 390,
+   "rot": 0,
+   "props": {
+    "label": "BUS4",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN16",
+   "type": "R",
+   "x": 690,
+   "y": 370,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN17",
+   "type": "SW",
+   "x": 490,
+   "y": 460,
+   "rot": 0,
+   "props": {
+    "label": "B0",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN17",
+   "type": "R",
+   "x": 670,
+   "y": 440,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN18",
+   "type": "SW",
+   "x": 490,
+   "y": 530,
+   "rot": 0,
+   "props": {
+    "label": "B1",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN18",
+   "type": "R",
+   "x": 670,
+   "y": 510,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN19",
+   "type": "SW",
+   "x": 490,
+   "y": 600,
+   "rot": 0,
+   "props": {
+    "label": "B2",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN19",
+   "type": "R",
+   "x": 670,
+   "y": 580,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN20",
+   "type": "SW",
+   "x": 490,
+   "y": 670,
+   "rot": 0,
+   "props": {
+    "label": "B3",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN20",
+   "type": "R",
+   "x": 670,
+   "y": 650,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN21",
+   "type": "SW",
+   "x": 920,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "B4",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN21",
+   "type": "R",
+   "x": 1100,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN22",
+   "type": "SW",
+   "x": 920,
+   "y": 110,
+   "rot": 0,
+   "props": {
+    "label": "B5",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN22",
+   "type": "R",
+   "x": 1100,
+   "y": 90,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN23",
+   "type": "SW",
+   "x": 920,
+   "y": 180,
+   "rot": 0,
+   "props": {
+    "label": "B6",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN23",
+   "type": "R",
+   "x": 1100,
+   "y": 160,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN24",
+   "type": "SW",
+   "x": 920,
+   "y": 250,
+   "rot": 0,
+   "props": {
+    "label": "B7",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN24",
+   "type": "R",
+   "x": 1100,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN25",
+   "type": "SW",
+   "x": 920,
+   "y": 320,
+   "rot": 0,
+   "props": {
+    "label": "SU",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN25",
+   "type": "R",
+   "x": 1100,
+   "y": 300,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN26",
+   "type": "SW",
+   "x": 920,
+   "y": 390,
+   "rot": 0,
+   "props": {
+    "label": "EO_n",
+    "module": "ALU",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN26",
+   "type": "R",
+   "x": 1120,
+   "y": 370,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "ALU",
+    "role": "input"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U12",
+     "7"
+    ],
+    [
+     "U13",
+     "7"
+    ],
+    [
+     "U14",
+     "8"
+    ],
+    [
+     "U15",
+     "8"
+    ],
+    [
+     "U16",
+     "10"
+    ],
+    [
+     "LED26",
+     "2"
+    ],
+    [
+     "LED27",
+     "2"
+    ],
+    [
+     "LED28",
+     "2"
+    ],
+    [
+     "LED29",
+     "2"
+    ],
+    [
+     "LED30",
+     "2"
+    ],
+    [
+     "LED31",
+     "2"
+    ],
+    [
+     "LED32",
+     "2"
+    ],
+    [
+     "LED33",
+     "2"
+    ],
+    [
+     "CD12",
+     "2"
+    ],
+    [
+     "CD13",
+     "2"
+    ],
+    [
+     "CD14",
+     "2"
+    ],
+    [
+     "CD15",
+     "2"
+    ],
+    [
+     "CD16",
+     "2"
+    ],
+    [
+     "CB6",
+     "2"
+    ],
+    [
+     "RIN1",
+     "2"
+    ],
+    [
+     "RIN2",
+     "2"
+    ],
+    [
+     "RIN3",
+     "2"
+    ],
+    [
+     "RIN4",
+     "2"
+    ],
+    [
+     "RIN5",
+     "2"
+    ],
+    [
+     "RIN6",
+     "2"
+    ],
+    [
+     "RIN7",
+     "2"
+    ],
+    [
+     "RIN8",
+     "2"
+    ],
+    [
+     "RIN9",
+     "2"
+    ],
+    [
+     "RIN10",
+     "2"
+    ],
+    [
+     "RIN11",
+     "2"
+    ],
+    [
+     "RIN12",
+     "2"
+    ],
+    [
+     "RIN13",
+     "2"
+    ],
+    [
+     "RIN14",
+     "2"
+    ],
+    [
+     "RIN15",
+     "2"
+    ],
+    [
+     "RIN16",
+     "2"
+    ],
+    [
+     "RIN17",
+     "2"
+    ],
+    [
+     "RIN18",
+     "2"
+    ],
+    [
+     "RIN19",
+     "2"
+    ],
+    [
+     "RIN20",
+     "2"
+    ],
+    [
+     "RIN21",
+     "2"
+    ],
+    [
+     "RIN22",
+     "2"
+    ],
+    [
+     "RIN23",
+     "2"
+    ],
+    [
+     "RIN24",
+     "2"
+    ],
+    [
+     "RIN25",
+     "2"
+    ],
+    [
+     "RIN26",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U12",
+     "14"
+    ],
+    [
+     "U13",
+     "14"
+    ],
+    [
+     "U14",
+     "16"
+    ],
+    [
+     "U15",
+     "16"
+    ],
+    [
+     "U16",
+     "1"
+    ],
+    [
+     "U16",
+     "20"
+    ],
+    [
+     "CD12",
+     "1"
+    ],
+    [
+     "CD13",
+     "1"
+    ],
+    [
+     "CD14",
+     "1"
+    ],
+    [
+     "CD15",
+     "1"
+    ],
+    [
+     "CD16",
+     "1"
+    ],
+    [
+     "CB6",
+     "1"
+    ],
+    [
+     "IN1",
+     "1"
+    ],
+    [
+     "IN2",
+     "1"
+    ],
+    [
+     "IN3",
+     "1"
+    ],
+    [
+     "IN4",
+     "1"
+    ],
+    [
+     "IN5",
+     "1"
+    ],
+    [
+     "IN6",
+     "1"
+    ],
+    [
+     "IN7",
+     "1"
+    ],
+    [
+     "IN8",
+     "1"
+    ],
+    [
+     "IN9",
+     "1"
+    ],
+    [
+     "IN10",
+     "1"
+    ],
+    [
+     "IN11",
+     "1"
+    ],
+    [
+     "IN12",
+     "1"
+    ],
+    [
+     "IN13",
+     "1"
+    ],
+    [
+     "IN14",
+     "1"
+    ],
+    [
+     "IN15",
+     "1"
+    ],
+    [
+     "IN16",
+     "1"
+    ],
+    [
+     "IN17",
+     "1"
+    ],
+    [
+     "IN18",
+     "1"
+    ],
+    [
+     "IN19",
+     "1"
+    ],
+    [
+     "IN20",
+     "1"
+    ],
+    [
+     "IN21",
+     "1"
+    ],
+    [
+     "IN22",
+     "1"
+    ],
+    [
+     "IN23",
+     "1"
+    ],
+    [
+     "IN24",
+     "1"
+    ],
+    [
+     "IN25",
+     "1"
+    ],
+    [
+     "IN26",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A0",
+   "pins": [
+    [
+     "U14",
+     "5"
+    ],
+    [
+     "IN1",
+     "2"
+    ],
+    [
+     "RIN1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A1",
+   "pins": [
+    [
+     "U14",
+     "3"
+    ],
+    [
+     "IN2",
+     "2"
+    ],
+    [
+     "RIN2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A2",
+   "pins": [
+    [
+     "U14",
+     "14"
+    ],
+    [
+     "IN3",
+     "2"
+    ],
+    [
+     "RIN3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A3",
+   "pins": [
+    [
+     "U14",
+     "12"
+    ],
+    [
+     "IN4",
+     "2"
+    ],
+    [
+     "RIN4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS3",
+   "pins": [
+    [
+     "U16",
+     "15"
+    ],
+    [
+     "IN5",
+     "2"
+    ],
+    [
+     "RIN5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS2",
+   "pins": [
+    [
+     "U16",
+     "16"
+    ],
+    [
+     "IN6",
+     "2"
+    ],
+    [
+     "RIN6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS1",
+   "pins": [
+    [
+     "U16",
+     "17"
+    ],
+    [
+     "IN7",
+     "2"
+    ],
+    [
+     "RIN7",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS0",
+   "pins": [
+    [
+     "U16",
+     "18"
+    ],
+    [
+     "IN8",
+     "2"
+    ],
+    [
+     "RIN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A4",
+   "pins": [
+    [
+     "U15",
+     "5"
+    ],
+    [
+     "IN9",
+     "2"
+    ],
+    [
+     "RIN9",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A5",
+   "pins": [
+    [
+     "U15",
+     "3"
+    ],
+    [
+     "IN10",
+     "2"
+    ],
+    [
+     "RIN10",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A6",
+   "pins": [
+    [
+     "U15",
+     "14"
+    ],
+    [
+     "IN11",
+     "2"
+    ],
+    [
+     "RIN11",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "A7",
+   "pins": [
+    [
+     "U15",
+     "12"
+    ],
+    [
+     "IN12",
+     "2"
+    ],
+    [
+     "RIN12",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS7",
+   "pins": [
+    [
+     "U16",
+     "11"
+    ],
+    [
+     "IN13",
+     "2"
+    ],
+    [
+     "RIN13",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS6",
+   "pins": [
+    [
+     "U16",
+     "12"
+    ],
+    [
+     "IN14",
+     "2"
+    ],
+    [
+     "RIN14",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS5",
+   "pins": [
+    [
+     "U16",
+     "13"
+    ],
+    [
+     "IN15",
+     "2"
+    ],
+    [
+     "RIN15",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS4",
+   "pins": [
+    [
+     "U16",
+     "14"
+    ],
+    [
+     "IN16",
+     "2"
+    ],
+    [
+     "RIN16",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "B0",
+   "pins": [
+    [
+     "U12",
+     "1"
+    ],
+    [
+     "IN17",
+     "2"
+    ],
+    [
+     "RIN17",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "B1",
+   "pins": [
+    [
+     "U12",
+     "4"
+    ],
+    [
+     "IN18",
+     "2"
+    ],
+    [
+     "RIN18",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "B2",
+   "pins": [
+    [
+     "U12",
+     "9"
+    ],
+    [
+     "IN19",
+     "2"
+    ],
+    [
+     "RIN19",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "B3",
+   "pins": [
+    [
+     "U12",
+     "12"
+    ],
+    [
+     "IN20",
+     "2"
+    ],
+    [
+     "RIN20",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "B4",
+   "pins": [
+    [
+     "U13",
+     "1"
+    ],
+    [
+     "IN21",
+     "2"
+    ],
+    [
+     "RIN21",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "B5",
+   "pins": [
+    [
+     "U13",
+     "4"
+    ],
+    [
+     "IN22",
+     "2"
+    ],
+    [
+     "RIN22",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "B6",
+   "pins": [
+    [
+     "U13",
+     "9"
+    ],
+    [
+     "IN23",
+     "2"
+    ],
+    [
+     "RIN23",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "B7",
+   "pins": [
+    [
+     "U13",
+     "12"
+    ],
+    [
+     "IN24",
+     "2"
+    ],
+    [
+     "RIN24",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SU",
+   "pins": [
+    [
+     "U12",
+     "2"
+    ],
+    [
+     "U12",
+     "5"
+    ],
+    [
+     "U12",
+     "10"
+    ],
+    [
+     "U12",
+     "13"
+    ],
+    [
+     "U13",
+     "2"
+    ],
+    [
+     "U13",
+     "5"
+    ],
+    [
+     "U13",
+     "10"
+    ],
+    [
+     "U13",
+     "13"
+    ],
+    [
+     "U14",
+     "7"
+    ],
+    [
+     "IN25",
+     "2"
+    ],
+    [
+     "RIN25",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BX0",
+   "pins": [
+    [
+     "U12",
+     "3"
+    ],
+    [
+     "U14",
+     "6"
+    ]
+   ]
+  },
+  {
+   "name": "BX1",
+   "pins": [
+    [
+     "U12",
+     "6"
+    ],
+    [
+     "U14",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "BX2",
+   "pins": [
+    [
+     "U12",
+     "8"
+    ],
+    [
+     "U14",
+     "15"
+    ]
+   ]
+  },
+  {
+   "name": "BX3",
+   "pins": [
+    [
+     "U12",
+     "11"
+    ],
+    [
+     "U14",
+     "11"
+    ]
+   ]
+  },
+  {
+   "name": "BX4",
+   "pins": [
+    [
+     "U13",
+     "3"
+    ],
+    [
+     "U15",
+     "6"
+    ]
+   ]
+  },
+  {
+   "name": "BX5",
+   "pins": [
+    [
+     "U13",
+     "6"
+    ],
+    [
+     "U15",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "BX6",
+   "pins": [
+    [
+     "U13",
+     "8"
+    ],
+    [
+     "U15",
+     "15"
+    ]
+   ]
+  },
+  {
+   "name": "BX7",
+   "pins": [
+    [
+     "U13",
+     "11"
+    ],
+    [
+     "U15",
+     "11"
+    ]
+   ]
+  },
+  {
+   "name": "E1",
+   "pins": [
+    [
+     "U14",
+     "1"
+    ],
+    [
+     "U16",
+     "3"
+    ],
+    [
+     "R39",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E0",
+   "pins": [
+    [
+     "U14",
+     "4"
+    ],
+    [
+     "U16",
+     "2"
+    ],
+    [
+     "R40",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CMID",
+   "pins": [
+    [
+     "U14",
+     "9"
+    ],
+    [
+     "U15",
+     "7"
+    ]
+   ]
+  },
+  {
+   "name": "E3",
+   "pins": [
+    [
+     "U14",
+     "10"
+    ],
+    [
+     "U16",
+     "5"
+    ],
+    [
+     "R37",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E2",
+   "pins": [
+    [
+     "U14",
+     "13"
+    ],
+    [
+     "U16",
+     "4"
+    ],
+    [
+     "R38",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E5",
+   "pins": [
+    [
+     "U15",
+     "1"
+    ],
+    [
+     "U16",
+     "7"
+    ],
+    [
+     "R35",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E4",
+   "pins": [
+    [
+     "U15",
+     "4"
+    ],
+    [
+     "U16",
+     "6"
+    ],
+    [
+     "R36",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "COUT",
+   "pins": [
+    [
+     "U15",
+     "9"
+    ]
+   ]
+  },
+  {
+   "name": "E7",
+   "pins": [
+    [
+     "U15",
+     "10"
+    ],
+    [
+     "U16",
+     "9"
+    ],
+    [
+     "R33",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E6",
+   "pins": [
+    [
+     "U15",
+     "13"
+    ],
+    [
+     "U16",
+     "8"
+    ],
+    [
+     "R34",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "EO_n",
+   "pins": [
+    [
+     "U16",
+     "19"
+    ],
+    [
+     "IN26",
+     "2"
+    ],
+    [
+     "RIN26",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E7~LED",
+   "pins": [
+    [
+     "R33",
+     "2"
+    ],
+    [
+     "LED26",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E6~LED",
+   "pins": [
+    [
+     "R34",
+     "2"
+    ],
+    [
+     "LED27",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E5~LED",
+   "pins": [
+    [
+     "R35",
+     "2"
+    ],
+    [
+     "LED28",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E4~LED",
+   "pins": [
+    [
+     "R36",
+     "2"
+    ],
+    [
+     "LED29",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E3~LED",
+   "pins": [
+    [
+     "R37",
+     "2"
+    ],
+    [
+     "LED30",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E2~LED",
+   "pins": [
+    [
+     "R38",
+     "2"
+    ],
+    [
+     "LED31",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E1~LED",
+   "pins": [
+    [
+     "R39",
+     "2"
+    ],
+    [
+     "LED32",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "E0~LED",
+   "pins": [
+    [
+     "R40",
+     "2"
+    ],
+    [
+     "LED33",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "A0",
+  "A1",
+  "A2",
+  "A3",
+  "BUS3",
+  "BUS2",
+  "BUS1",
+  "BUS0",
+  "A4",
+  "A5",
+  "A6",
+  "A7",
+  "BUS7",
+  "BUS6",
+  "BUS5",
+  "BUS4",
+  "B0",
+  "B1",
+  "B2",
+  "B3",
+  "B4",
+  "B5",
+  "B6",
+  "B7"
+ ]
+}

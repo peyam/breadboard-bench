@@ -1,0 +1,1195 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "PC-2 Input",
+ "notes": "The Input module of PC-2 on its own. The switches IN1, IN2, ... stand in for the signals that come from other modules: BUS3, BUS2, BUS1, BUS0, BUS7, BUS6, BUS5, BUS4, IRL0, XO_n.",
+ "parts": [
+  {
+   "id": "U39",
+   "type": "74HCT245",
+   "x": 540,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Input",
+    "label": "input switches A to bus"
+   }
+  },
+  {
+   "id": "U40",
+   "type": "74HCT245",
+   "x": 880,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Input",
+    "label": "input switches B to bus"
+   }
+  },
+  {
+   "id": "U41",
+   "type": "74HCT139",
+   "x": 540,
+   "y": 350,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Input",
+    "label": "input bank select"
+   }
+  },
+  {
+   "id": "RN4",
+   "type": "RN8",
+   "x": 60,
+   "y": 750,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Front panel",
+    "label": "pull-downs for S3",
+    "value": "10k",
+    "bank": "S3"
+   }
+  },
+  {
+   "id": "S3",
+   "type": "DIPSW8",
+   "x": 290,
+   "y": 750,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Front panel",
+    "labels": [
+     "input A switch 7",
+     "input A switch 6",
+     "input A switch 5",
+     "input A switch 4",
+     "input A switch 3",
+     "input A switch 2",
+     "input A switch 1",
+     "input A switch 0"
+    ],
+    "msb_first": true
+   }
+  },
+  {
+   "id": "RN5",
+   "type": "RN8",
+   "x": 500,
+   "y": 750,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Front panel",
+    "label": "pull-downs for S4",
+    "value": "10k",
+    "bank": "S4"
+   }
+  },
+  {
+   "id": "S4",
+   "type": "DIPSW8",
+   "x": 730,
+   "y": 750,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Front panel",
+    "labels": [
+     "input B switch 7",
+     "input B switch 6",
+     "input B switch 5",
+     "input B switch 4",
+     "input B switch 3",
+     "input B switch 2",
+     "input B switch 1",
+     "input B switch 0"
+    ],
+    "msb_first": true
+   }
+  },
+  {
+   "id": "CD39",
+   "type": "C",
+   "x": 930,
+   "y": 760,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Input",
+    "label": "decoupling U39",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD40",
+   "type": "C",
+   "x": 1110,
+   "y": 760,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Input",
+    "label": "decoupling U40",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD41",
+   "type": "C",
+   "x": 60,
+   "y": 1010,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Input",
+    "label": "decoupling U41",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CB12",
+   "type": "C",
+   "x": 240,
+   "y": 1010,
+   "rot": 0,
+   "props": {
+    "module": "Input",
+    "board": "Input",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "IN1",
+   "type": "SW",
+   "x": 60,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "BUS3",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN1",
+   "type": "R",
+   "x": 260,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN2",
+   "type": "SW",
+   "x": 60,
+   "y": 110,
+   "rot": 0,
+   "props": {
+    "label": "BUS2",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN2",
+   "type": "R",
+   "x": 260,
+   "y": 90,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN3",
+   "type": "SW",
+   "x": 60,
+   "y": 180,
+   "rot": 0,
+   "props": {
+    "label": "BUS1",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN3",
+   "type": "R",
+   "x": 260,
+   "y": 160,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN4",
+   "type": "SW",
+   "x": 60,
+   "y": 250,
+   "rot": 0,
+   "props": {
+    "label": "BUS0",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN4",
+   "type": "R",
+   "x": 260,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN5",
+   "type": "SW",
+   "x": 60,
+   "y": 320,
+   "rot": 0,
+   "props": {
+    "label": "BUS7",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN5",
+   "type": "R",
+   "x": 260,
+   "y": 300,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN6",
+   "type": "SW",
+   "x": 60,
+   "y": 390,
+   "rot": 0,
+   "props": {
+    "label": "BUS6",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN6",
+   "type": "R",
+   "x": 260,
+   "y": 370,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN7",
+   "type": "SW",
+   "x": 60,
+   "y": 460,
+   "rot": 0,
+   "props": {
+    "label": "BUS5",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN7",
+   "type": "R",
+   "x": 260,
+   "y": 440,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN8",
+   "type": "SW",
+   "x": 60,
+   "y": 530,
+   "rot": 0,
+   "props": {
+    "label": "BUS4",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN8",
+   "type": "R",
+   "x": 260,
+   "y": 510,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN9",
+   "type": "SW",
+   "x": 60,
+   "y": 600,
+   "rot": 0,
+   "props": {
+    "label": "IRL0",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN9",
+   "type": "R",
+   "x": 260,
+   "y": 580,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN10",
+   "type": "SW",
+   "x": 60,
+   "y": 670,
+   "rot": 0,
+   "props": {
+    "label": "XO_n",
+    "module": "Input",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN10",
+   "type": "R",
+   "x": 260,
+   "y": 650,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Input",
+    "role": "input"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U39",
+     "10"
+    ],
+    [
+     "U40",
+     "10"
+    ],
+    [
+     "U41",
+     "3"
+    ],
+    [
+     "U41",
+     "8"
+    ],
+    [
+     "U41",
+     "13"
+    ],
+    [
+     "U41",
+     "14"
+    ],
+    [
+     "RN4",
+     "1"
+    ],
+    [
+     "RN5",
+     "1"
+    ],
+    [
+     "CD39",
+     "2"
+    ],
+    [
+     "CD40",
+     "2"
+    ],
+    [
+     "CD41",
+     "2"
+    ],
+    [
+     "CB12",
+     "2"
+    ],
+    [
+     "RIN1",
+     "2"
+    ],
+    [
+     "RIN2",
+     "2"
+    ],
+    [
+     "RIN3",
+     "2"
+    ],
+    [
+     "RIN4",
+     "2"
+    ],
+    [
+     "RIN5",
+     "2"
+    ],
+    [
+     "RIN6",
+     "2"
+    ],
+    [
+     "RIN7",
+     "2"
+    ],
+    [
+     "RIN8",
+     "2"
+    ],
+    [
+     "RIN9",
+     "2"
+    ],
+    [
+     "RIN10",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U39",
+     "1"
+    ],
+    [
+     "U39",
+     "20"
+    ],
+    [
+     "U40",
+     "1"
+    ],
+    [
+     "U40",
+     "20"
+    ],
+    [
+     "U41",
+     "15"
+    ],
+    [
+     "U41",
+     "16"
+    ],
+    [
+     "S3",
+     "1"
+    ],
+    [
+     "S3",
+     "2"
+    ],
+    [
+     "S3",
+     "3"
+    ],
+    [
+     "S3",
+     "4"
+    ],
+    [
+     "S3",
+     "5"
+    ],
+    [
+     "S3",
+     "6"
+    ],
+    [
+     "S3",
+     "7"
+    ],
+    [
+     "S3",
+     "8"
+    ],
+    [
+     "S4",
+     "1"
+    ],
+    [
+     "S4",
+     "2"
+    ],
+    [
+     "S4",
+     "3"
+    ],
+    [
+     "S4",
+     "4"
+    ],
+    [
+     "S4",
+     "5"
+    ],
+    [
+     "S4",
+     "6"
+    ],
+    [
+     "S4",
+     "7"
+    ],
+    [
+     "S4",
+     "8"
+    ],
+    [
+     "CD39",
+     "1"
+    ],
+    [
+     "CD40",
+     "1"
+    ],
+    [
+     "CD41",
+     "1"
+    ],
+    [
+     "CB12",
+     "1"
+    ],
+    [
+     "IN1",
+     "1"
+    ],
+    [
+     "IN2",
+     "1"
+    ],
+    [
+     "IN3",
+     "1"
+    ],
+    [
+     "IN4",
+     "1"
+    ],
+    [
+     "IN5",
+     "1"
+    ],
+    [
+     "IN6",
+     "1"
+    ],
+    [
+     "IN7",
+     "1"
+    ],
+    [
+     "IN8",
+     "1"
+    ],
+    [
+     "IN9",
+     "1"
+    ],
+    [
+     "IN10",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS3",
+   "pins": [
+    [
+     "U39",
+     "15"
+    ],
+    [
+     "U40",
+     "15"
+    ],
+    [
+     "IN1",
+     "2"
+    ],
+    [
+     "RIN1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS2",
+   "pins": [
+    [
+     "U39",
+     "16"
+    ],
+    [
+     "U40",
+     "16"
+    ],
+    [
+     "IN2",
+     "2"
+    ],
+    [
+     "RIN2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS1",
+   "pins": [
+    [
+     "U39",
+     "17"
+    ],
+    [
+     "U40",
+     "17"
+    ],
+    [
+     "IN3",
+     "2"
+    ],
+    [
+     "RIN3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS0",
+   "pins": [
+    [
+     "U39",
+     "18"
+    ],
+    [
+     "U40",
+     "18"
+    ],
+    [
+     "IN4",
+     "2"
+    ],
+    [
+     "RIN4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS7",
+   "pins": [
+    [
+     "U39",
+     "11"
+    ],
+    [
+     "U40",
+     "11"
+    ],
+    [
+     "IN5",
+     "2"
+    ],
+    [
+     "RIN5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS6",
+   "pins": [
+    [
+     "U39",
+     "12"
+    ],
+    [
+     "U40",
+     "12"
+    ],
+    [
+     "IN6",
+     "2"
+    ],
+    [
+     "RIN6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS5",
+   "pins": [
+    [
+     "U39",
+     "13"
+    ],
+    [
+     "U40",
+     "13"
+    ],
+    [
+     "IN7",
+     "2"
+    ],
+    [
+     "RIN7",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS4",
+   "pins": [
+    [
+     "U39",
+     "14"
+    ],
+    [
+     "U40",
+     "14"
+    ],
+    [
+     "IN8",
+     "2"
+    ],
+    [
+     "RIN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "IRL0",
+   "pins": [
+    [
+     "U41",
+     "2"
+    ],
+    [
+     "IN9",
+     "2"
+    ],
+    [
+     "RIN9",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "INA0",
+   "pins": [
+    [
+     "U39",
+     "2"
+    ],
+    [
+     "RN4",
+     "9"
+    ],
+    [
+     "S3",
+     "9"
+    ]
+   ]
+  },
+  {
+   "name": "INA1",
+   "pins": [
+    [
+     "U39",
+     "3"
+    ],
+    [
+     "RN4",
+     "8"
+    ],
+    [
+     "S3",
+     "10"
+    ]
+   ]
+  },
+  {
+   "name": "INA2",
+   "pins": [
+    [
+     "U39",
+     "4"
+    ],
+    [
+     "RN4",
+     "7"
+    ],
+    [
+     "S3",
+     "11"
+    ]
+   ]
+  },
+  {
+   "name": "INA3",
+   "pins": [
+    [
+     "U39",
+     "5"
+    ],
+    [
+     "RN4",
+     "6"
+    ],
+    [
+     "S3",
+     "12"
+    ]
+   ]
+  },
+  {
+   "name": "INA4",
+   "pins": [
+    [
+     "U39",
+     "6"
+    ],
+    [
+     "RN4",
+     "5"
+    ],
+    [
+     "S3",
+     "13"
+    ]
+   ]
+  },
+  {
+   "name": "INA5",
+   "pins": [
+    [
+     "U39",
+     "7"
+    ],
+    [
+     "RN4",
+     "4"
+    ],
+    [
+     "S3",
+     "14"
+    ]
+   ]
+  },
+  {
+   "name": "INA6",
+   "pins": [
+    [
+     "U39",
+     "8"
+    ],
+    [
+     "RN4",
+     "3"
+    ],
+    [
+     "S3",
+     "15"
+    ]
+   ]
+  },
+  {
+   "name": "INA7",
+   "pins": [
+    [
+     "U39",
+     "9"
+    ],
+    [
+     "RN4",
+     "2"
+    ],
+    [
+     "S3",
+     "16"
+    ]
+   ]
+  },
+  {
+   "name": "XSEL0_n",
+   "pins": [
+    [
+     "U39",
+     "19"
+    ],
+    [
+     "U41",
+     "4"
+    ]
+   ]
+  },
+  {
+   "name": "INB0",
+   "pins": [
+    [
+     "U40",
+     "2"
+    ],
+    [
+     "RN5",
+     "9"
+    ],
+    [
+     "S4",
+     "9"
+    ]
+   ]
+  },
+  {
+   "name": "INB1",
+   "pins": [
+    [
+     "U40",
+     "3"
+    ],
+    [
+     "RN5",
+     "8"
+    ],
+    [
+     "S4",
+     "10"
+    ]
+   ]
+  },
+  {
+   "name": "INB2",
+   "pins": [
+    [
+     "U40",
+     "4"
+    ],
+    [
+     "RN5",
+     "7"
+    ],
+    [
+     "S4",
+     "11"
+    ]
+   ]
+  },
+  {
+   "name": "INB3",
+   "pins": [
+    [
+     "U40",
+     "5"
+    ],
+    [
+     "RN5",
+     "6"
+    ],
+    [
+     "S4",
+     "12"
+    ]
+   ]
+  },
+  {
+   "name": "INB4",
+   "pins": [
+    [
+     "U40",
+     "6"
+    ],
+    [
+     "RN5",
+     "5"
+    ],
+    [
+     "S4",
+     "13"
+    ]
+   ]
+  },
+  {
+   "name": "INB5",
+   "pins": [
+    [
+     "U40",
+     "7"
+    ],
+    [
+     "RN5",
+     "4"
+    ],
+    [
+     "S4",
+     "14"
+    ]
+   ]
+  },
+  {
+   "name": "INB6",
+   "pins": [
+    [
+     "U40",
+     "8"
+    ],
+    [
+     "RN5",
+     "3"
+    ],
+    [
+     "S4",
+     "15"
+    ]
+   ]
+  },
+  {
+   "name": "INB7",
+   "pins": [
+    [
+     "U40",
+     "9"
+    ],
+    [
+     "RN5",
+     "2"
+    ],
+    [
+     "S4",
+     "16"
+    ]
+   ]
+  },
+  {
+   "name": "XSEL1_n",
+   "pins": [
+    [
+     "U40",
+     "19"
+    ],
+    [
+     "U41",
+     "5"
+    ]
+   ]
+  },
+  {
+   "name": "XO_n",
+   "pins": [
+    [
+     "U41",
+     "1"
+    ],
+    [
+     "IN10",
+     "2"
+    ],
+    [
+     "RIN10",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "BUS3",
+  "BUS2",
+  "BUS1",
+  "BUS0",
+  "BUS7",
+  "BUS6",
+  "BUS5",
+  "BUS4",
+  "IRL0",
+  "INA0",
+  "INA1",
+  "INA2",
+  "INA3",
+  "INA4",
+  "INA5",
+  "INA6",
+  "INA7",
+  "XSEL0_n",
+  "INB0",
+  "INB1",
+  "INB2",
+  "INB3",
+  "INB4",
+  "INB5"
+ ]
+}

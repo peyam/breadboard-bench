@@ -1,0 +1,1080 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "PC-2 Memory address",
+ "notes": "The Memory address module of PC-2 on its own. The switches IN1, IN2, ... stand in for the signals that come from other modules: CLK, RST, BUS3, BUS2, BUS1, BUS0, MI_n, PROG.",
+ "parts": [
+  {
+   "id": "U22",
+   "type": "74HCT173",
+   "x": 520,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "memory address register"
+   }
+  },
+  {
+   "id": "U23",
+   "type": "74HCT157",
+   "x": 520,
+   "y": 350,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "address select: MAR (run) or switches (program)"
+   }
+  },
+  {
+   "id": "RN2",
+   "type": "RN4",
+   "x": 60,
+   "y": 730,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Front panel",
+    "label": "pull-downs for S1",
+    "value": "10k",
+    "bank": "S1"
+   }
+  },
+  {
+   "id": "S1",
+   "type": "DIPSW4",
+   "x": 290,
+   "y": 730,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Front panel",
+    "labels": [
+     "address switch 3",
+     "address switch 2",
+     "address switch 1",
+     "address switch 0"
+    ],
+    "msb_first": true
+   }
+  },
+  {
+   "id": "R47",
+   "type": "R",
+   "x": 490,
+   "y": 740,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "LED resistor (address bit 3)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED40",
+   "type": "LED",
+   "x": 740,
+   "y": 750,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "address bit 3",
+    "colour": "yellow",
+    "resistor": "R47"
+   }
+  },
+  {
+   "id": "R48",
+   "type": "R",
+   "x": 940,
+   "y": 740,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "LED resistor (address bit 2)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED41",
+   "type": "LED",
+   "x": 80,
+   "y": 920,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "address bit 2",
+    "colour": "yellow",
+    "resistor": "R48"
+   }
+  },
+  {
+   "id": "R49",
+   "type": "R",
+   "x": 280,
+   "y": 910,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "LED resistor (address bit 1)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED42",
+   "type": "LED",
+   "x": 530,
+   "y": 920,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "address bit 1",
+    "colour": "yellow",
+    "resistor": "R49"
+   }
+  },
+  {
+   "id": "R50",
+   "type": "R",
+   "x": 730,
+   "y": 910,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "LED resistor (address bit 0)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED43",
+   "type": "LED",
+   "x": 970,
+   "y": 920,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "address bit 0",
+    "colour": "yellow",
+    "resistor": "R50"
+   }
+  },
+  {
+   "id": "SPDT2",
+   "type": "SPDT",
+   "x": 60,
+   "y": 1030,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Front panel",
+    "label": "PROGRAM / RUN",
+    "positions": [
+     "PROG",
+     "RUN"
+    ],
+    "pos": "RUN"
+   }
+  },
+  {
+   "id": "R51",
+   "type": "R",
+   "x": 290,
+   "y": 1010,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Front panel",
+    "label": "pull-down",
+    "value": "10k"
+   }
+  },
+  {
+   "id": "R52",
+   "type": "R",
+   "x": 500,
+   "y": 1010,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Front panel",
+    "label": "LED resistor (program mode)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED44",
+   "type": "LED",
+   "x": 760,
+   "y": 1020,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Front panel",
+    "label": "program mode",
+    "colour": "yellow",
+    "resistor": "R52"
+   }
+  },
+  {
+   "id": "CD22",
+   "type": "C",
+   "x": 960,
+   "y": 1020,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "decoupling U22",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD23",
+   "type": "C",
+   "x": 1140,
+   "y": 1020,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "decoupling U23",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CB8",
+   "type": "C",
+   "x": 60,
+   "y": 1130,
+   "rot": 0,
+   "props": {
+    "module": "Memory address",
+    "board": "Memory address",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "IN1",
+   "type": "BUTTON",
+   "x": 60,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "CLK",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN1",
+   "type": "R",
+   "x": 250,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN2",
+   "type": "SW",
+   "x": 60,
+   "y": 130,
+   "rot": 0,
+   "props": {
+    "label": "RST",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN2",
+   "type": "R",
+   "x": 250,
+   "y": 120,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN3",
+   "type": "SW",
+   "x": 60,
+   "y": 200,
+   "rot": 0,
+   "props": {
+    "label": "BUS3",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN3",
+   "type": "R",
+   "x": 260,
+   "y": 190,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN4",
+   "type": "SW",
+   "x": 60,
+   "y": 270,
+   "rot": 0,
+   "props": {
+    "label": "BUS2",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN4",
+   "type": "R",
+   "x": 260,
+   "y": 260,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN5",
+   "type": "SW",
+   "x": 60,
+   "y": 340,
+   "rot": 0,
+   "props": {
+    "label": "BUS1",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN5",
+   "type": "R",
+   "x": 260,
+   "y": 330,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN6",
+   "type": "SW",
+   "x": 60,
+   "y": 410,
+   "rot": 0,
+   "props": {
+    "label": "BUS0",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN6",
+   "type": "R",
+   "x": 260,
+   "y": 400,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN7",
+   "type": "SW",
+   "x": 60,
+   "y": 480,
+   "rot": 0,
+   "props": {
+    "label": "MI_n",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN7",
+   "type": "R",
+   "x": 260,
+   "y": 470,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN8",
+   "type": "SW",
+   "x": 60,
+   "y": 550,
+   "rot": 0,
+   "props": {
+    "label": "PROG",
+    "module": "Memory address",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN8",
+   "type": "R",
+   "x": 260,
+   "y": 540,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Memory address",
+    "role": "input"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U22",
+     "1"
+    ],
+    [
+     "U22",
+     "2"
+    ],
+    [
+     "U22",
+     "8"
+    ],
+    [
+     "U23",
+     "8"
+    ],
+    [
+     "U23",
+     "15"
+    ],
+    [
+     "RN2",
+     "1"
+    ],
+    [
+     "LED40",
+     "2"
+    ],
+    [
+     "LED41",
+     "2"
+    ],
+    [
+     "LED42",
+     "2"
+    ],
+    [
+     "LED43",
+     "2"
+    ],
+    [
+     "R51",
+     "2"
+    ],
+    [
+     "LED44",
+     "2"
+    ],
+    [
+     "CD22",
+     "2"
+    ],
+    [
+     "CD23",
+     "2"
+    ],
+    [
+     "CB8",
+     "2"
+    ],
+    [
+     "RIN1",
+     "2"
+    ],
+    [
+     "RIN2",
+     "2"
+    ],
+    [
+     "RIN3",
+     "2"
+    ],
+    [
+     "RIN4",
+     "2"
+    ],
+    [
+     "RIN5",
+     "2"
+    ],
+    [
+     "RIN6",
+     "2"
+    ],
+    [
+     "RIN7",
+     "2"
+    ],
+    [
+     "RIN8",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U22",
+     "16"
+    ],
+    [
+     "U23",
+     "16"
+    ],
+    [
+     "S1",
+     "1"
+    ],
+    [
+     "S1",
+     "2"
+    ],
+    [
+     "S1",
+     "3"
+    ],
+    [
+     "S1",
+     "4"
+    ],
+    [
+     "SPDT2",
+     "1"
+    ],
+    [
+     "CD22",
+     "1"
+    ],
+    [
+     "CD23",
+     "1"
+    ],
+    [
+     "CB8",
+     "1"
+    ],
+    [
+     "IN1",
+     "1"
+    ],
+    [
+     "IN1",
+     "2"
+    ],
+    [
+     "IN2",
+     "1"
+    ],
+    [
+     "IN3",
+     "1"
+    ],
+    [
+     "IN4",
+     "1"
+    ],
+    [
+     "IN5",
+     "1"
+    ],
+    [
+     "IN6",
+     "1"
+    ],
+    [
+     "IN7",
+     "1"
+    ],
+    [
+     "IN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CLK",
+   "pins": [
+    [
+     "U22",
+     "7"
+    ],
+    [
+     "IN1",
+     "3"
+    ],
+    [
+     "IN1",
+     "4"
+    ],
+    [
+     "RIN1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RST",
+   "pins": [
+    [
+     "U22",
+     "15"
+    ],
+    [
+     "IN2",
+     "2"
+    ],
+    [
+     "RIN2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS3",
+   "pins": [
+    [
+     "U22",
+     "11"
+    ],
+    [
+     "IN3",
+     "2"
+    ],
+    [
+     "RIN3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS2",
+   "pins": [
+    [
+     "U22",
+     "12"
+    ],
+    [
+     "IN4",
+     "2"
+    ],
+    [
+     "RIN4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS1",
+   "pins": [
+    [
+     "U22",
+     "13"
+    ],
+    [
+     "IN5",
+     "2"
+    ],
+    [
+     "RIN5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS0",
+   "pins": [
+    [
+     "U22",
+     "14"
+    ],
+    [
+     "IN6",
+     "2"
+    ],
+    [
+     "RIN6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "MAR0",
+   "pins": [
+    [
+     "U22",
+     "3"
+    ],
+    [
+     "U23",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "MAR1",
+   "pins": [
+    [
+     "U22",
+     "4"
+    ],
+    [
+     "U23",
+     "5"
+    ]
+   ]
+  },
+  {
+   "name": "MAR2",
+   "pins": [
+    [
+     "U22",
+     "5"
+    ],
+    [
+     "U23",
+     "11"
+    ]
+   ]
+  },
+  {
+   "name": "MAR3",
+   "pins": [
+    [
+     "U22",
+     "6"
+    ],
+    [
+     "U23",
+     "14"
+    ]
+   ]
+  },
+  {
+   "name": "MI_n",
+   "pins": [
+    [
+     "U22",
+     "9"
+    ],
+    [
+     "U22",
+     "10"
+    ],
+    [
+     "IN7",
+     "2"
+    ],
+    [
+     "RIN7",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "PROG",
+   "pins": [
+    [
+     "U23",
+     "1"
+    ],
+    [
+     "SPDT2",
+     "2"
+    ],
+    [
+     "R51",
+     "1"
+    ],
+    [
+     "R52",
+     "1"
+    ],
+    [
+     "IN8",
+     "2"
+    ],
+    [
+     "RIN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "ASW0",
+   "pins": [
+    [
+     "U23",
+     "3"
+    ],
+    [
+     "RN2",
+     "5"
+    ],
+    [
+     "S1",
+     "5"
+    ]
+   ]
+  },
+  {
+   "name": "RA0",
+   "pins": [
+    [
+     "U23",
+     "4"
+    ],
+    [
+     "R50",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "ASW1",
+   "pins": [
+    [
+     "U23",
+     "6"
+    ],
+    [
+     "RN2",
+     "4"
+    ],
+    [
+     "S1",
+     "6"
+    ]
+   ]
+  },
+  {
+   "name": "RA1",
+   "pins": [
+    [
+     "U23",
+     "7"
+    ],
+    [
+     "R49",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RA2",
+   "pins": [
+    [
+     "U23",
+     "9"
+    ],
+    [
+     "R48",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "ASW2",
+   "pins": [
+    [
+     "U23",
+     "10"
+    ],
+    [
+     "RN2",
+     "3"
+    ],
+    [
+     "S1",
+     "7"
+    ]
+   ]
+  },
+  {
+   "name": "RA3",
+   "pins": [
+    [
+     "U23",
+     "12"
+    ],
+    [
+     "R47",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "ASW3",
+   "pins": [
+    [
+     "U23",
+     "13"
+    ],
+    [
+     "RN2",
+     "2"
+    ],
+    [
+     "S1",
+     "8"
+    ]
+   ]
+  },
+  {
+   "name": "RA3~LED",
+   "pins": [
+    [
+     "R47",
+     "2"
+    ],
+    [
+     "LED40",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RA2~LED",
+   "pins": [
+    [
+     "R48",
+     "2"
+    ],
+    [
+     "LED41",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RA1~LED",
+   "pins": [
+    [
+     "R49",
+     "2"
+    ],
+    [
+     "LED42",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RA0~LED",
+   "pins": [
+    [
+     "R50",
+     "2"
+    ],
+    [
+     "LED43",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "PROG_NC",
+   "pins": [
+    [
+     "SPDT2",
+     "3"
+    ]
+   ]
+  },
+  {
+   "name": "PROG~LED",
+   "pins": [
+    [
+     "R52",
+     "2"
+    ],
+    [
+     "LED44",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "CLK",
+  "RST",
+  "BUS3",
+  "BUS2",
+  "BUS1",
+  "BUS0",
+  "MAR0",
+  "MAR1",
+  "MAR2",
+  "MAR3",
+  "MI_n",
+  "PROG",
+  "ASW0",
+  "RA0",
+  "ASW1",
+  "RA1",
+  "RA2",
+  "ASW2",
+  "RA3",
+  "ASW3",
+  "PROG_NC"
+ ]
+}

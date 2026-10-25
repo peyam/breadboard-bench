@@ -1,0 +1,1619 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "PC-2 Display",
+ "notes": "The Display module of PC-2 on its own. The switches IN1, IN2, ... stand in for the signals that come from other modules: SR0, SR1, SR2, SR3, SR4, SR5, SR6, SR7.",
+ "parts": [
+  {
+   "id": "U35",
+   "type": "74HCT245",
+   "x": 510,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "segment drivers"
+   }
+  },
+  {
+   "id": "U36",
+   "type": "NE555",
+   "x": 850,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "display scan clock (astable, about 690 Hz)",
+    "mode": "manual"
+   }
+  },
+  {
+   "id": "U37",
+   "type": "74HCT107",
+   "x": 850,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit counter"
+   }
+  },
+  {
+   "id": "U38",
+   "type": "74HCT139",
+   "x": 510,
+   "y": 350,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit select"
+   }
+  },
+  {
+   "id": "R70",
+   "type": "R",
+   "x": 60,
+   "y": 700,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "R71",
+   "type": "R",
+   "x": 270,
+   "y": 700,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "value": "10k"
+   }
+  },
+  {
+   "id": "C8",
+   "type": "C",
+   "x": 470,
+   "y": 710,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "C9",
+   "type": "C",
+   "x": 650,
+   "y": 710,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "value": "10nF"
+   }
+  },
+  {
+   "id": "R72",
+   "type": "R",
+   "x": 840,
+   "y": 700,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "segment a",
+    "value": "470"
+   }
+  },
+  {
+   "id": "R73",
+   "type": "R",
+   "x": 1050,
+   "y": 700,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "segment b",
+    "value": "470"
+   }
+  },
+  {
+   "id": "R74",
+   "type": "R",
+   "x": 60,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "segment c",
+    "value": "470"
+   }
+  },
+  {
+   "id": "R75",
+   "type": "R",
+   "x": 280,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "segment d",
+    "value": "470"
+   }
+  },
+  {
+   "id": "R76",
+   "type": "R",
+   "x": 500,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "segment e",
+    "value": "470"
+   }
+  },
+  {
+   "id": "R77",
+   "type": "R",
+   "x": 720,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "segment f",
+    "value": "470"
+   }
+  },
+  {
+   "id": "R78",
+   "type": "R",
+   "x": 930,
+   "y": 790,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "segment g",
+    "value": "470"
+   }
+  },
+  {
+   "id": "R79",
+   "type": "R",
+   "x": 60,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "segment dp",
+    "value": "470"
+   }
+  },
+  {
+   "id": "R80",
+   "type": "R",
+   "x": 300,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit 3 base",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "Q1",
+   "type": "PNP",
+   "x": 500,
+   "y": 870,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit 3 driver",
+    "value": "2N3906"
+   }
+  },
+  {
+   "id": "DISP1",
+   "type": "7SEG-CA",
+   "x": 740,
+   "y": 870,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "digit 3 (sign)",
+    "value": "0.56in common anode"
+   }
+  },
+  {
+   "id": "R81",
+   "type": "R",
+   "x": 990,
+   "y": 880,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit 2 base",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "Q2",
+   "type": "PNP",
+   "x": 60,
+   "y": 1120,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit 2 driver",
+    "value": "2N3906"
+   }
+  },
+  {
+   "id": "DISP2",
+   "type": "7SEG-CA",
+   "x": 300,
+   "y": 1120,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "digit 2 (hundreds)",
+    "value": "0.56in common anode"
+   }
+  },
+  {
+   "id": "R82",
+   "type": "R",
+   "x": 540,
+   "y": 1130,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit 1 base",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "Q3",
+   "type": "PNP",
+   "x": 750,
+   "y": 1120,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit 1 driver",
+    "value": "2N3906"
+   }
+  },
+  {
+   "id": "DISP3",
+   "type": "7SEG-CA",
+   "x": 990,
+   "y": 1120,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "digit 1 (tens)",
+    "value": "0.56in common anode"
+   }
+  },
+  {
+   "id": "R83",
+   "type": "R",
+   "x": 80,
+   "y": 1380,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit 0 base",
+    "value": "2.2k"
+   }
+  },
+  {
+   "id": "Q4",
+   "type": "PNP",
+   "x": 280,
+   "y": 1370,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "digit 0 driver",
+    "value": "2N3906"
+   }
+  },
+  {
+   "id": "DISP4",
+   "type": "7SEG-CA",
+   "x": 520,
+   "y": 1370,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "digit 0 (ones)",
+    "value": "0.56in common anode"
+   }
+  },
+  {
+   "id": "CD35",
+   "type": "C",
+   "x": 750,
+   "y": 1390,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "decoupling U35",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD36",
+   "type": "C",
+   "x": 930,
+   "y": 1390,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "decoupling U36",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD37",
+   "type": "C",
+   "x": 1110,
+   "y": 1390,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "decoupling U37",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD38",
+   "type": "C",
+   "x": 60,
+   "y": 1640,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "decoupling U38",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CB14",
+   "type": "C",
+   "x": 240,
+   "y": 1640,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display driver",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "CB15",
+   "type": "C",
+   "x": 420,
+   "y": 1640,
+   "rot": 0,
+   "props": {
+    "module": "Display",
+    "board": "Display",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "IN1",
+   "type": "SW",
+   "x": 60,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "SR0",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN1",
+   "type": "R",
+   "x": 250,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN2",
+   "type": "SW",
+   "x": 60,
+   "y": 110,
+   "rot": 0,
+   "props": {
+    "label": "SR1",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN2",
+   "type": "R",
+   "x": 250,
+   "y": 90,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN3",
+   "type": "SW",
+   "x": 60,
+   "y": 180,
+   "rot": 0,
+   "props": {
+    "label": "SR2",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN3",
+   "type": "R",
+   "x": 250,
+   "y": 160,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN4",
+   "type": "SW",
+   "x": 60,
+   "y": 250,
+   "rot": 0,
+   "props": {
+    "label": "SR3",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN4",
+   "type": "R",
+   "x": 250,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN5",
+   "type": "SW",
+   "x": 60,
+   "y": 320,
+   "rot": 0,
+   "props": {
+    "label": "SR4",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN5",
+   "type": "R",
+   "x": 250,
+   "y": 300,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN6",
+   "type": "SW",
+   "x": 60,
+   "y": 390,
+   "rot": 0,
+   "props": {
+    "label": "SR5",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN6",
+   "type": "R",
+   "x": 250,
+   "y": 370,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN7",
+   "type": "SW",
+   "x": 60,
+   "y": 460,
+   "rot": 0,
+   "props": {
+    "label": "SR6",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN7",
+   "type": "R",
+   "x": 250,
+   "y": 440,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN8",
+   "type": "SW",
+   "x": 60,
+   "y": 530,
+   "rot": 0,
+   "props": {
+    "label": "SR7",
+    "module": "Display",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN8",
+   "type": "R",
+   "x": 250,
+   "y": 510,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Display",
+    "role": "input"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U35",
+     "10"
+    ],
+    [
+     "U35",
+     "19"
+    ],
+    [
+     "U36",
+     "1"
+    ],
+    [
+     "U37",
+     "7"
+    ],
+    [
+     "U38",
+     "1"
+    ],
+    [
+     "U38",
+     "8"
+    ],
+    [
+     "U38",
+     "13"
+    ],
+    [
+     "U38",
+     "14"
+    ],
+    [
+     "C8",
+     "2"
+    ],
+    [
+     "C9",
+     "2"
+    ],
+    [
+     "CD35",
+     "2"
+    ],
+    [
+     "CD36",
+     "2"
+    ],
+    [
+     "CD37",
+     "2"
+    ],
+    [
+     "CD38",
+     "2"
+    ],
+    [
+     "CB14",
+     "2"
+    ],
+    [
+     "CB15",
+     "2"
+    ],
+    [
+     "RIN1",
+     "2"
+    ],
+    [
+     "RIN2",
+     "2"
+    ],
+    [
+     "RIN3",
+     "2"
+    ],
+    [
+     "RIN4",
+     "2"
+    ],
+    [
+     "RIN5",
+     "2"
+    ],
+    [
+     "RIN6",
+     "2"
+    ],
+    [
+     "RIN7",
+     "2"
+    ],
+    [
+     "RIN8",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U35",
+     "1"
+    ],
+    [
+     "U35",
+     "20"
+    ],
+    [
+     "U36",
+     "4"
+    ],
+    [
+     "U36",
+     "8"
+    ],
+    [
+     "U37",
+     "1"
+    ],
+    [
+     "U37",
+     "4"
+    ],
+    [
+     "U37",
+     "8"
+    ],
+    [
+     "U37",
+     "10"
+    ],
+    [
+     "U37",
+     "11"
+    ],
+    [
+     "U37",
+     "13"
+    ],
+    [
+     "U37",
+     "14"
+    ],
+    [
+     "U38",
+     "15"
+    ],
+    [
+     "U38",
+     "16"
+    ],
+    [
+     "R70",
+     "1"
+    ],
+    [
+     "Q1",
+     "1"
+    ],
+    [
+     "Q2",
+     "1"
+    ],
+    [
+     "Q3",
+     "1"
+    ],
+    [
+     "Q4",
+     "1"
+    ],
+    [
+     "CD35",
+     "1"
+    ],
+    [
+     "CD36",
+     "1"
+    ],
+    [
+     "CD37",
+     "1"
+    ],
+    [
+     "CD38",
+     "1"
+    ],
+    [
+     "CB14",
+     "1"
+    ],
+    [
+     "CB15",
+     "1"
+    ],
+    [
+     "IN1",
+     "1"
+    ],
+    [
+     "IN2",
+     "1"
+    ],
+    [
+     "IN3",
+     "1"
+    ],
+    [
+     "IN4",
+     "1"
+    ],
+    [
+     "IN5",
+     "1"
+    ],
+    [
+     "IN6",
+     "1"
+    ],
+    [
+     "IN7",
+     "1"
+    ],
+    [
+     "IN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR0",
+   "pins": [
+    [
+     "U35",
+     "2"
+    ],
+    [
+     "IN1",
+     "2"
+    ],
+    [
+     "RIN1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR1",
+   "pins": [
+    [
+     "U35",
+     "3"
+    ],
+    [
+     "IN2",
+     "2"
+    ],
+    [
+     "RIN2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR2",
+   "pins": [
+    [
+     "U35",
+     "4"
+    ],
+    [
+     "IN3",
+     "2"
+    ],
+    [
+     "RIN3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR3",
+   "pins": [
+    [
+     "U35",
+     "5"
+    ],
+    [
+     "IN4",
+     "2"
+    ],
+    [
+     "RIN4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR4",
+   "pins": [
+    [
+     "U35",
+     "6"
+    ],
+    [
+     "IN5",
+     "2"
+    ],
+    [
+     "RIN5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR5",
+   "pins": [
+    [
+     "U35",
+     "7"
+    ],
+    [
+     "IN6",
+     "2"
+    ],
+    [
+     "RIN6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR6",
+   "pins": [
+    [
+     "U35",
+     "8"
+    ],
+    [
+     "IN7",
+     "2"
+    ],
+    [
+     "RIN7",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SR7",
+   "pins": [
+    [
+     "U35",
+     "9"
+    ],
+    [
+     "IN8",
+     "2"
+    ],
+    [
+     "RIN8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "DIG1",
+   "pins": [
+    [
+     "U37",
+     "5"
+    ],
+    [
+     "U38",
+     "3"
+    ]
+   ]
+  },
+  {
+   "name": "DIG0",
+   "pins": [
+    [
+     "U37",
+     "3"
+    ],
+    [
+     "U37",
+     "9"
+    ],
+    [
+     "U38",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "SEG7",
+   "pins": [
+    [
+     "U35",
+     "11"
+    ],
+    [
+     "R79",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEG6",
+   "pins": [
+    [
+     "U35",
+     "12"
+    ],
+    [
+     "R78",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEG5",
+   "pins": [
+    [
+     "U35",
+     "13"
+    ],
+    [
+     "R77",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEG4",
+   "pins": [
+    [
+     "U35",
+     "14"
+    ],
+    [
+     "R76",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEG3",
+   "pins": [
+    [
+     "U35",
+     "15"
+    ],
+    [
+     "R75",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEG2",
+   "pins": [
+    [
+     "U35",
+     "16"
+    ],
+    [
+     "R74",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEG1",
+   "pins": [
+    [
+     "U35",
+     "17"
+    ],
+    [
+     "R73",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEG0",
+   "pins": [
+    [
+     "U35",
+     "18"
+    ],
+    [
+     "R72",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CT4",
+   "pins": [
+    [
+     "U36",
+     "2"
+    ],
+    [
+     "U36",
+     "6"
+    ],
+    [
+     "R71",
+     "2"
+    ],
+    [
+     "C8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SCANCLK",
+   "pins": [
+    [
+     "U36",
+     "3"
+    ],
+    [
+     "U37",
+     "12"
+    ]
+   ]
+  },
+  {
+   "name": "CV4",
+   "pins": [
+    [
+     "U36",
+     "5"
+    ],
+    [
+     "C9",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "DIS4",
+   "pins": [
+    [
+     "U36",
+     "7"
+    ],
+    [
+     "R70",
+     "2"
+    ],
+    [
+     "R71",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "DSEL0_n",
+   "pins": [
+    [
+     "U38",
+     "4"
+    ],
+    [
+     "R83",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "DSEL1_n",
+   "pins": [
+    [
+     "U38",
+     "5"
+    ],
+    [
+     "R82",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "DSEL2_n",
+   "pins": [
+    [
+     "U38",
+     "6"
+    ],
+    [
+     "R81",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "DSEL3_n",
+   "pins": [
+    [
+     "U38",
+     "7"
+    ],
+    [
+     "R80",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEGR0",
+   "pins": [
+    [
+     "R72",
+     "2"
+    ],
+    [
+     "DISP1",
+     "7"
+    ],
+    [
+     "DISP2",
+     "7"
+    ],
+    [
+     "DISP3",
+     "7"
+    ],
+    [
+     "DISP4",
+     "7"
+    ]
+   ]
+  },
+  {
+   "name": "SEGR1",
+   "pins": [
+    [
+     "R73",
+     "2"
+    ],
+    [
+     "DISP1",
+     "6"
+    ],
+    [
+     "DISP2",
+     "6"
+    ],
+    [
+     "DISP3",
+     "6"
+    ],
+    [
+     "DISP4",
+     "6"
+    ]
+   ]
+  },
+  {
+   "name": "SEGR2",
+   "pins": [
+    [
+     "R74",
+     "2"
+    ],
+    [
+     "DISP1",
+     "4"
+    ],
+    [
+     "DISP2",
+     "4"
+    ],
+    [
+     "DISP3",
+     "4"
+    ],
+    [
+     "DISP4",
+     "4"
+    ]
+   ]
+  },
+  {
+   "name": "SEGR3",
+   "pins": [
+    [
+     "R75",
+     "2"
+    ],
+    [
+     "DISP1",
+     "2"
+    ],
+    [
+     "DISP2",
+     "2"
+    ],
+    [
+     "DISP3",
+     "2"
+    ],
+    [
+     "DISP4",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "SEGR4",
+   "pins": [
+    [
+     "R76",
+     "2"
+    ],
+    [
+     "DISP1",
+     "1"
+    ],
+    [
+     "DISP2",
+     "1"
+    ],
+    [
+     "DISP3",
+     "1"
+    ],
+    [
+     "DISP4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SEGR5",
+   "pins": [
+    [
+     "R77",
+     "2"
+    ],
+    [
+     "DISP1",
+     "9"
+    ],
+    [
+     "DISP2",
+     "9"
+    ],
+    [
+     "DISP3",
+     "9"
+    ],
+    [
+     "DISP4",
+     "9"
+    ]
+   ]
+  },
+  {
+   "name": "SEGR6",
+   "pins": [
+    [
+     "R78",
+     "2"
+    ],
+    [
+     "DISP1",
+     "10"
+    ],
+    [
+     "DISP2",
+     "10"
+    ],
+    [
+     "DISP3",
+     "10"
+    ],
+    [
+     "DISP4",
+     "10"
+    ]
+   ]
+  },
+  {
+   "name": "SEGR7",
+   "pins": [
+    [
+     "R79",
+     "2"
+    ],
+    [
+     "DISP1",
+     "5"
+    ],
+    [
+     "DISP2",
+     "5"
+    ],
+    [
+     "DISP3",
+     "5"
+    ],
+    [
+     "DISP4",
+     "5"
+    ]
+   ]
+  },
+  {
+   "name": "QB3",
+   "pins": [
+    [
+     "R80",
+     "2"
+    ],
+    [
+     "Q1",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "DCOM3",
+   "pins": [
+    [
+     "Q1",
+     "3"
+    ],
+    [
+     "DISP1",
+     "3"
+    ],
+    [
+     "DISP1",
+     "8"
+    ]
+   ]
+  },
+  {
+   "name": "QB2",
+   "pins": [
+    [
+     "R81",
+     "2"
+    ],
+    [
+     "Q2",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "DCOM2",
+   "pins": [
+    [
+     "Q2",
+     "3"
+    ],
+    [
+     "DISP2",
+     "3"
+    ],
+    [
+     "DISP2",
+     "8"
+    ]
+   ]
+  },
+  {
+   "name": "QB1",
+   "pins": [
+    [
+     "R82",
+     "2"
+    ],
+    [
+     "Q3",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "DCOM1",
+   "pins": [
+    [
+     "Q3",
+     "3"
+    ],
+    [
+     "DISP3",
+     "3"
+    ],
+    [
+     "DISP3",
+     "8"
+    ]
+   ]
+  },
+  {
+   "name": "QB0",
+   "pins": [
+    [
+     "R83",
+     "2"
+    ],
+    [
+     "Q4",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "DCOM0",
+   "pins": [
+    [
+     "Q4",
+     "3"
+    ],
+    [
+     "DISP4",
+     "3"
+    ],
+    [
+     "DISP4",
+     "8"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "SR0",
+  "SR1",
+  "SR2",
+  "SR3",
+  "SR4",
+  "SR5",
+  "SR6",
+  "SR7",
+  "DIG1",
+  "DIG0",
+  "SEG7",
+  "SEG6",
+  "SEG5",
+  "SEG4",
+  "SEG3",
+  "SEG2",
+  "SEG1",
+  "SEG0",
+  "CT4",
+  "SCANCLK",
+  "CV4",
+  "DIS4",
+  "DSEL0_n",
+  "DSEL1_n"
+ ]
+}

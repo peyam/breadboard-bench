@@ -1,0 +1,532 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "PC-2 Bus",
+ "notes": "The Bus module of PC-2 on its own. The switches IN1, IN2, ... stand in for the signals that come from other modules: none.",
+ "parts": [
+  {
+   "id": "RN1",
+   "type": "RN8",
+   "x": 60,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus pull-downs",
+    "value": "10k"
+   }
+  },
+  {
+   "id": "R9",
+   "type": "R",
+   "x": 290,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "LED resistor (bus 7)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED2",
+   "type": "LED",
+   "x": 550,
+   "y": 30,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus 7",
+    "colour": "red",
+    "resistor": "R9"
+   }
+  },
+  {
+   "id": "R10",
+   "type": "R",
+   "x": 760,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "LED resistor (bus 6)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED3",
+   "type": "LED",
+   "x": 1020,
+   "y": 30,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus 6",
+    "colour": "red",
+    "resistor": "R10"
+   }
+  },
+  {
+   "id": "R11",
+   "type": "R",
+   "x": 60,
+   "y": 220,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "LED resistor (bus 5)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED4",
+   "type": "LED",
+   "x": 320,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus 5",
+    "colour": "red",
+    "resistor": "R11"
+   }
+  },
+  {
+   "id": "R12",
+   "type": "R",
+   "x": 530,
+   "y": 220,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "LED resistor (bus 4)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED5",
+   "type": "LED",
+   "x": 780,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus 4",
+    "colour": "red",
+    "resistor": "R12"
+   }
+  },
+  {
+   "id": "R13",
+   "type": "R",
+   "x": 990,
+   "y": 220,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "LED resistor (bus 3)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED6",
+   "type": "LED",
+   "x": 80,
+   "y": 330,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus 3",
+    "colour": "red",
+    "resistor": "R13"
+   }
+  },
+  {
+   "id": "R14",
+   "type": "R",
+   "x": 290,
+   "y": 320,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "LED resistor (bus 2)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED7",
+   "type": "LED",
+   "x": 550,
+   "y": 330,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus 2",
+    "colour": "red",
+    "resistor": "R14"
+   }
+  },
+  {
+   "id": "R15",
+   "type": "R",
+   "x": 760,
+   "y": 320,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "LED resistor (bus 1)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED8",
+   "type": "LED",
+   "x": 1010,
+   "y": 330,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus 1",
+    "colour": "red",
+    "resistor": "R15"
+   }
+  },
+  {
+   "id": "R16",
+   "type": "R",
+   "x": 60,
+   "y": 420,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "LED resistor (bus 0)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED9",
+   "type": "LED",
+   "x": 320,
+   "y": 430,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bus 0",
+    "colour": "red",
+    "resistor": "R16"
+   }
+  },
+  {
+   "id": "CB3",
+   "type": "C",
+   "x": 520,
+   "y": 430,
+   "rot": 0,
+   "props": {
+    "module": "Bus",
+    "board": "Bus",
+    "label": "bulk supply capacitor",
+    "rail_row": 59,
+    "polarised": true,
+    "value": "100uF"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "RN1",
+     "1"
+    ],
+    [
+     "LED2",
+     "2"
+    ],
+    [
+     "LED3",
+     "2"
+    ],
+    [
+     "LED4",
+     "2"
+    ],
+    [
+     "LED5",
+     "2"
+    ],
+    [
+     "LED6",
+     "2"
+    ],
+    [
+     "LED7",
+     "2"
+    ],
+    [
+     "LED8",
+     "2"
+    ],
+    [
+     "LED9",
+     "2"
+    ],
+    [
+     "CB3",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "CB3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS3",
+   "pins": [
+    [
+     "RN1",
+     "5"
+    ],
+    [
+     "R13",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS2",
+   "pins": [
+    [
+     "RN1",
+     "4"
+    ],
+    [
+     "R14",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS1",
+   "pins": [
+    [
+     "RN1",
+     "3"
+    ],
+    [
+     "R15",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS0",
+   "pins": [
+    [
+     "RN1",
+     "2"
+    ],
+    [
+     "R16",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS7",
+   "pins": [
+    [
+     "RN1",
+     "9"
+    ],
+    [
+     "R9",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS6",
+   "pins": [
+    [
+     "RN1",
+     "8"
+    ],
+    [
+     "R10",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS5",
+   "pins": [
+    [
+     "RN1",
+     "7"
+    ],
+    [
+     "R11",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS4",
+   "pins": [
+    [
+     "RN1",
+     "6"
+    ],
+    [
+     "R12",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS7~LED",
+   "pins": [
+    [
+     "R9",
+     "2"
+    ],
+    [
+     "LED2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS6~LED",
+   "pins": [
+    [
+     "R10",
+     "2"
+    ],
+    [
+     "LED3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS5~LED",
+   "pins": [
+    [
+     "R11",
+     "2"
+    ],
+    [
+     "LED4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS4~LED",
+   "pins": [
+    [
+     "R12",
+     "2"
+    ],
+    [
+     "LED5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS3~LED",
+   "pins": [
+    [
+     "R13",
+     "2"
+    ],
+    [
+     "LED6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS2~LED",
+   "pins": [
+    [
+     "R14",
+     "2"
+    ],
+    [
+     "LED7",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS1~LED",
+   "pins": [
+    [
+     "R15",
+     "2"
+    ],
+    [
+     "LED8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "BUS0~LED",
+   "pins": [
+    [
+     "R16",
+     "2"
+    ],
+    [
+     "LED9",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "BUS3",
+  "BUS2",
+  "BUS1",
+  "BUS0",
+  "BUS7",
+  "BUS6",
+  "BUS5",
+  "BUS4"
+ ]
+}

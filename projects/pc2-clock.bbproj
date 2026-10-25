@@ -1,0 +1,1222 @@
+{
+ "format": "breadboard-bench/1",
+ "name": "PC-2 Clock",
+ "notes": "The Clock module of PC-2 on its own. The switches IN1, IN2, ... stand in for the signals that come from other modules: RST, HLT_n.",
+ "parts": [
+  {
+   "id": "U1",
+   "type": "NE555",
+   "x": 550,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "run clock (astable)",
+    "mode": "auto"
+   }
+  },
+  {
+   "id": "U2",
+   "type": "NE555",
+   "x": 910,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "single-step pulse (monostable)",
+    "mode": "auto"
+   }
+  },
+  {
+   "id": "U3",
+   "type": "NE555",
+   "x": 1260,
+   "y": 10,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "run/step select (bistable debouncer)",
+    "mode": "auto"
+   }
+  },
+  {
+   "id": "U4",
+   "type": "74HCT04",
+   "x": 550,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "clock inverters"
+   }
+  },
+  {
+   "id": "U5",
+   "type": "74HCT08",
+   "x": 910,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "clock select and halt"
+   }
+  },
+  {
+   "id": "U6",
+   "type": "74HCT32",
+   "x": 1260,
+   "y": 230,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "clock select"
+   }
+  },
+  {
+   "id": "R1",
+   "type": "R",
+   "x": 60,
+   "y": 660,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "astable R1",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "R2",
+   "type": "R",
+   "x": 270,
+   "y": 660,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "astable R2 (minimum)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "VR1",
+   "type": "POT",
+   "x": 480,
+   "y": 650,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "clock speed",
+    "value": "1M lin",
+    "position": 0.0
+   }
+  },
+  {
+   "id": "JP1",
+   "type": "JUMPER3",
+   "x": 700,
+   "y": 680,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "speed range jumper",
+    "positions": [
+     "SLOW",
+     "FAST"
+    ],
+    "pos": "FAST"
+   }
+  },
+  {
+   "id": "C1",
+   "type": "C",
+   "x": 900,
+   "y": 670,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "slow range, 0.7-480 Hz",
+    "polarised": true,
+    "value": "1uF"
+   }
+  },
+  {
+   "id": "C2",
+   "type": "C",
+   "x": 1080,
+   "y": 670,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "fast range, 7-4800 Hz",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "C3",
+   "type": "C",
+   "x": 1260,
+   "y": 670,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "555 control-voltage decoupling",
+    "value": "10nF"
+   }
+  },
+  {
+   "id": "R3",
+   "type": "R",
+   "x": 60,
+   "y": 800,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "pull-up",
+    "value": "10k"
+   }
+  },
+  {
+   "id": "BTN1",
+   "type": "BUTTON",
+   "x": 300,
+   "y": 820,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "STEP"
+   }
+  },
+  {
+   "id": "R4",
+   "type": "R",
+   "x": 490,
+   "y": 800,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "monostable timing",
+    "value": "100k"
+   }
+  },
+  {
+   "id": "C4",
+   "type": "C",
+   "x": 690,
+   "y": 810,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "monostable timing, 110 ms",
+    "polarised": true,
+    "value": "1uF"
+   }
+  },
+  {
+   "id": "C5",
+   "type": "C",
+   "x": 870,
+   "y": 810,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "value": "10nF"
+   }
+  },
+  {
+   "id": "R5",
+   "type": "R",
+   "x": 1060,
+   "y": 800,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "pull-up",
+    "value": "10k"
+   }
+  },
+  {
+   "id": "R6",
+   "type": "R",
+   "x": 1270,
+   "y": 800,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "pull-up",
+    "value": "10k"
+   }
+  },
+  {
+   "id": "SPDT1",
+   "type": "SPDT",
+   "x": 60,
+   "y": 940,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "RUN / STEP",
+    "positions": [
+     "RUN",
+     "STEP"
+    ],
+    "pos": "STEP"
+   }
+  },
+  {
+   "id": "C6",
+   "type": "C",
+   "x": 280,
+   "y": 930,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "value": "10nF"
+   }
+  },
+  {
+   "id": "R7",
+   "type": "R",
+   "x": 460,
+   "y": 930,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "pull-down",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "C7",
+   "type": "C",
+   "x": 660,
+   "y": 930,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "reset line filter",
+    "value": "10nF"
+   }
+  },
+  {
+   "id": "BTN2",
+   "type": "BUTTON",
+   "x": 840,
+   "y": 940,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "RESET"
+   }
+  },
+  {
+   "id": "R8",
+   "type": "R",
+   "x": 1030,
+   "y": 930,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "LED resistor (clock)",
+    "value": "1k"
+   }
+  },
+  {
+   "id": "LED1",
+   "type": "LED",
+   "x": 1280,
+   "y": 940,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "clock",
+    "colour": "yellow",
+    "resistor": "R8"
+   }
+  },
+  {
+   "id": "CD1",
+   "type": "C",
+   "x": 60,
+   "y": 1060,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "decoupling U1",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD2",
+   "type": "C",
+   "x": 240,
+   "y": 1060,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "decoupling U2",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD3",
+   "type": "C",
+   "x": 420,
+   "y": 1060,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "decoupling U3",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD4",
+   "type": "C",
+   "x": 600,
+   "y": 1060,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "decoupling U4",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD5",
+   "type": "C",
+   "x": 780,
+   "y": 1060,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "decoupling U5",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CD6",
+   "type": "C",
+   "x": 960,
+   "y": 1060,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "decoupling U6",
+    "value": "100nF"
+   }
+  },
+  {
+   "id": "CB1",
+   "type": "C",
+   "x": 1140,
+   "y": 1060,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Front panel",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "CB2",
+   "type": "C",
+   "x": 1320,
+   "y": 1060,
+   "rot": 0,
+   "props": {
+    "module": "Clock",
+    "board": "Clock",
+    "label": "bulk supply capacitor",
+    "polarised": true,
+    "value": "10uF"
+   }
+  },
+  {
+   "id": "IN1",
+   "type": "SW",
+   "x": 60,
+   "y": 40,
+   "rot": 0,
+   "props": {
+    "label": "RST",
+    "module": "Clock",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN1",
+   "type": "R",
+   "x": 250,
+   "y": 20,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Clock",
+    "role": "input"
+   }
+  },
+  {
+   "id": "IN2",
+   "type": "SW",
+   "x": 60,
+   "y": 110,
+   "rot": 0,
+   "props": {
+    "label": "HLT_n",
+    "module": "Clock",
+    "role": "input"
+   }
+  },
+  {
+   "id": "RIN2",
+   "type": "R",
+   "x": 270,
+   "y": 90,
+   "rot": 0,
+   "props": {
+    "value": "10k",
+    "label": "pull-down",
+    "module": "Clock",
+    "role": "input"
+   }
+  }
+ ],
+ "nets": [
+  {
+   "name": "GND",
+   "pins": [
+    [
+     "U1",
+     "1"
+    ],
+    [
+     "U2",
+     "1"
+    ],
+    [
+     "U3",
+     "1"
+    ],
+    [
+     "U3",
+     "6"
+    ],
+    [
+     "U4",
+     "7"
+    ],
+    [
+     "U4",
+     "9"
+    ],
+    [
+     "U4",
+     "11"
+    ],
+    [
+     "U4",
+     "13"
+    ],
+    [
+     "U5",
+     "7"
+    ],
+    [
+     "U5",
+     "12"
+    ],
+    [
+     "U5",
+     "13"
+    ],
+    [
+     "U6",
+     "4"
+    ],
+    [
+     "U6",
+     "5"
+    ],
+    [
+     "U6",
+     "7"
+    ],
+    [
+     "U6",
+     "9"
+    ],
+    [
+     "U6",
+     "10"
+    ],
+    [
+     "U6",
+     "12"
+    ],
+    [
+     "U6",
+     "13"
+    ],
+    [
+     "C1",
+     "2"
+    ],
+    [
+     "C2",
+     "2"
+    ],
+    [
+     "C3",
+     "2"
+    ],
+    [
+     "BTN1",
+     "3"
+    ],
+    [
+     "BTN1",
+     "4"
+    ],
+    [
+     "C4",
+     "2"
+    ],
+    [
+     "C5",
+     "2"
+    ],
+    [
+     "SPDT1",
+     "2"
+    ],
+    [
+     "C6",
+     "2"
+    ],
+    [
+     "R7",
+     "2"
+    ],
+    [
+     "C7",
+     "2"
+    ],
+    [
+     "LED1",
+     "2"
+    ],
+    [
+     "CD1",
+     "2"
+    ],
+    [
+     "CD2",
+     "2"
+    ],
+    [
+     "CD3",
+     "2"
+    ],
+    [
+     "CD4",
+     "2"
+    ],
+    [
+     "CD5",
+     "2"
+    ],
+    [
+     "CD6",
+     "2"
+    ],
+    [
+     "CB1",
+     "2"
+    ],
+    [
+     "CB2",
+     "2"
+    ],
+    [
+     "RIN1",
+     "2"
+    ],
+    [
+     "RIN2",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "CT1",
+   "pins": [
+    [
+     "U1",
+     "2"
+    ],
+    [
+     "U1",
+     "6"
+    ],
+    [
+     "VR1",
+     "2"
+    ],
+    [
+     "VR1",
+     "3"
+    ],
+    [
+     "JP1",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "CLKRAW",
+   "pins": [
+    [
+     "U1",
+     "3"
+    ],
+    [
+     "U5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "VCC",
+   "pins": [
+    [
+     "U1",
+     "4"
+    ],
+    [
+     "U1",
+     "8"
+    ],
+    [
+     "U2",
+     "4"
+    ],
+    [
+     "U2",
+     "8"
+    ],
+    [
+     "U3",
+     "8"
+    ],
+    [
+     "U4",
+     "14"
+    ],
+    [
+     "U5",
+     "14"
+    ],
+    [
+     "U6",
+     "14"
+    ],
+    [
+     "R1",
+     "1"
+    ],
+    [
+     "R3",
+     "1"
+    ],
+    [
+     "R4",
+     "1"
+    ],
+    [
+     "R5",
+     "1"
+    ],
+    [
+     "R6",
+     "1"
+    ],
+    [
+     "BTN2",
+     "1"
+    ],
+    [
+     "BTN2",
+     "2"
+    ],
+    [
+     "CD1",
+     "1"
+    ],
+    [
+     "CD2",
+     "1"
+    ],
+    [
+     "CD3",
+     "1"
+    ],
+    [
+     "CD4",
+     "1"
+    ],
+    [
+     "CD5",
+     "1"
+    ],
+    [
+     "CD6",
+     "1"
+    ],
+    [
+     "CB1",
+     "1"
+    ],
+    [
+     "CB2",
+     "1"
+    ],
+    [
+     "IN1",
+     "1"
+    ],
+    [
+     "IN2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CV1",
+   "pins": [
+    [
+     "U1",
+     "5"
+    ],
+    [
+     "C3",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "DIS1",
+   "pins": [
+    [
+     "U1",
+     "7"
+    ],
+    [
+     "R1",
+     "2"
+    ],
+    [
+     "R2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "STEPBTN",
+   "pins": [
+    [
+     "U2",
+     "2"
+    ],
+    [
+     "R3",
+     "2"
+    ],
+    [
+     "BTN1",
+     "1"
+    ],
+    [
+     "BTN1",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "STEPPULSE",
+   "pins": [
+    [
+     "U2",
+     "3"
+    ],
+    [
+     "U5",
+     "4"
+    ]
+   ]
+  },
+  {
+   "name": "CV2",
+   "pins": [
+    [
+     "U2",
+     "5"
+    ],
+    [
+     "C5",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CT2",
+   "pins": [
+    [
+     "U2",
+     "6"
+    ],
+    [
+     "U2",
+     "7"
+    ],
+    [
+     "R4",
+     "2"
+    ],
+    [
+     "C4",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "SELRUN",
+   "pins": [
+    [
+     "U3",
+     "2"
+    ],
+    [
+     "R5",
+     "2"
+    ],
+    [
+     "SPDT1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RUNSEL",
+   "pins": [
+    [
+     "U3",
+     "3"
+    ],
+    [
+     "U4",
+     "1"
+    ],
+    [
+     "U5",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "SELSTEP",
+   "pins": [
+    [
+     "U3",
+     "4"
+    ],
+    [
+     "R6",
+     "2"
+    ],
+    [
+     "SPDT1",
+     "3"
+    ]
+   ]
+  },
+  {
+   "name": "CV3",
+   "pins": [
+    [
+     "U3",
+     "5"
+    ],
+    [
+     "C6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "U3DIS",
+   "pins": [
+    [
+     "U3",
+     "7"
+    ]
+   ]
+  },
+  {
+   "name": "RUNSEL_n",
+   "pins": [
+    [
+     "U4",
+     "2"
+    ],
+    [
+     "U5",
+     "5"
+    ]
+   ]
+  },
+  {
+   "name": "CLK",
+   "pins": [
+    [
+     "U4",
+     "3"
+    ],
+    [
+     "U5",
+     "8"
+    ],
+    [
+     "R8",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CLK_n",
+   "pins": [
+    [
+     "U4",
+     "4"
+    ]
+   ]
+  },
+  {
+   "name": "RST",
+   "pins": [
+    [
+     "U4",
+     "5"
+    ],
+    [
+     "R7",
+     "1"
+    ],
+    [
+     "C7",
+     "1"
+    ],
+    [
+     "BTN2",
+     "3"
+    ],
+    [
+     "BTN2",
+     "4"
+    ],
+    [
+     "IN1",
+     "2"
+    ],
+    [
+     "RIN1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "RST_n",
+   "pins": [
+    [
+     "U4",
+     "6"
+    ]
+   ]
+  },
+  {
+   "name": "CK_RUN",
+   "pins": [
+    [
+     "U5",
+     "3"
+    ],
+    [
+     "U6",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CK_STEP",
+   "pins": [
+    [
+     "U5",
+     "6"
+    ],
+    [
+     "U6",
+     "2"
+    ]
+   ]
+  },
+  {
+   "name": "CK_SEL",
+   "pins": [
+    [
+     "U5",
+     "9"
+    ],
+    [
+     "U6",
+     "3"
+    ]
+   ]
+  },
+  {
+   "name": "HLT_n",
+   "pins": [
+    [
+     "U5",
+     "10"
+    ],
+    [
+     "IN2",
+     "2"
+    ],
+    [
+     "RIN2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "POT1",
+   "pins": [
+    [
+     "R2",
+     "2"
+    ],
+    [
+     "VR1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CTS",
+   "pins": [
+    [
+     "JP1",
+     "1"
+    ],
+    [
+     "C1",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CTF",
+   "pins": [
+    [
+     "JP1",
+     "3"
+    ],
+    [
+     "C2",
+     "1"
+    ]
+   ]
+  },
+  {
+   "name": "CLK~LED",
+   "pins": [
+    [
+     "R8",
+     "2"
+    ],
+    [
+     "LED1",
+     "1"
+    ]
+   ]
+  }
+ ],
+ "schematic": {
+  "wires": [],
+  "labels": []
+ },
+ "breadboards": [],
+ "links": [],
+ "stimuli": [],
+ "probes": [
+  "CT1",
+  "CLKRAW",
+  "CV1",
+  "DIS1",
+  "STEPBTN",
+  "STEPPULSE",
+  "CV2",
+  "CT2",
+  "SELRUN",
+  "RUNSEL",
+  "SELSTEP",
+  "CV3",
+  "U3DIS",
+  "RUNSEL_n",
+  "CLK",
+  "CLK_n",
+  "RST",
+  "RST_n",
+  "CK_RUN",
+  "CK_STEP",
+  "CK_SEL",
+  "HLT_n",
+  "POT1",
+  "CTS"
+ ]
+}
