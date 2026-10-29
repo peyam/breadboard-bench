@@ -289,7 +289,7 @@ export class Breadboard {
         const [hx, hy] = endXY(at);
         const up = Array.isArray(at) && "fghij".includes(at[1]);
         const ey = up ? hy - 7 : hy + 7;
-        const col = l.colour || (l.net ? wireHex(l.net) : "#7B5EA7");
+        const col = l.colour || (l.net ? wireHex(l.net) : "#7E848D");
         const g = s("g", { transform: `translate(${bb.x || 0} ${bb.y || 0})` });
         g.append(s("line", { x1: hx, y1: hy, x2: hx, y2: ey, stroke: col, "stroke-width": 1.8 }));
         g.append(s("circle", { cx: hx, cy: ey, r: 1.8, fill: col }));

@@ -1,6 +1,6 @@
 /* Breadboard Bench — app styles. The look follows the house style of The Breadboard Computer:
    ink on warm paper, Fredoka headings, Lexend text, JetBrains Mono for values, and the same
-   signal colours as the book (bus yellow, control blue, data green, clock pink-red, address purple). */
+   signal colours as the book (bus yellow, control blue, data green, clock pink-red, address and step grey). */
 @font-face { font-family: Fredoka; src: url(../fonts/fredoka-latin-500-normal.woff2) format("woff2"); font-weight: 500; font-display: swap; }
 @font-face { font-family: Fredoka; src: url(../fonts/fredoka-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
 @font-face { font-family: Fredoka; src: url(../fonts/fredoka-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-display: swap; }
@@ -24,8 +24,9 @@
   --sky: #3D7FD0;   --sky-t: #E1ECFA;
   --leaf: #4E9F3D;  --leaf-t: #E4F2DF;
   --plum: #7B5EA7;  --plum-t: #ECE5F6;
+  --grey: #7E848D;  --grey-t: #ECEDEF;
   --pwr: #C8412B; --gndc: #1B2A41;
-  --sig-bus: var(--bus); --sig-ctrl: var(--sky); --sig-data: var(--leaf); --sig-clock: var(--berry); --sig-addr: var(--plum); --sig-misc: var(--copper);
+  --sig-bus: var(--bus); --sig-ctrl: var(--sky); --sig-data: var(--leaf); --sig-clock: var(--berry); --sig-addr: var(--grey); --sig-misc: var(--copper);
   --v0: #33415A; --vz: #9AA3B2; --vx: #D2352B;
   --sheet: #FFFDF8; --grid: #EDE5D3; --chip: #FFFFFF; --chip-line: #1B2A41;
   --select: #3D7FD0; --danger: #C8312B; --ok: #2E8540;
@@ -47,6 +48,7 @@
   --sky: #63A0EC;   --sky-t: #1A2A42;
   --leaf: #6CC257;  --leaf-t: #1C3220;
   --plum: #A487D1;  --plum-t: #2A2340;
+  --grey: #8C939D;  --grey-t: #262C35;
   --pwr: #EF6A50; --gndc: #A9B6C8;
   --v0: #5A6B85; --vz: #6F7B8E; --vx: #FF6454;
   --sheet: #151E2B; --grid: #1F2A3A; --chip: #1C2636; --chip-line: #C9D4E3;
@@ -62,6 +64,7 @@
     --well: #0F1620; --hover: #222D3D;
     --copper: #F08A55; --copper-t: #3A271D; --teal: #2DB8A7; --teal-t: #16312F; --sun: #F6C35A; --sun-t: #3A3120; --bus: #E8B332;
     --berry: #EC6A90; --berry-t: #3A1E29; --sky: #63A0EC; --sky-t: #1A2A42; --leaf: #6CC257; --leaf-t: #1C3220; --plum: #A487D1; --plum-t: #2A2340;
+    --grey: #8C939D; --grey-t: #262C35;
     --pwr: #EF6A50; --gndc: #A9B6C8; --v0: #5A6B85; --vz: #6F7B8E; --vx: #FF6454;
     --sheet: #151E2B; --grid: #1F2A3A; --chip: #1C2636; --chip-line: #C9D4E3; --select: #63A0EC; --danger: #FF6454; --ok: #5CC46E;
     --board: #D9D3C6; --board-line: #A79D88; --hole: #9C927E; --dip: #202024; --wave-bg: #141D2A; --wave-grid: #223044;
