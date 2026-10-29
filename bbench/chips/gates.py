@@ -30,7 +30,7 @@ def _table2(fn):
 @register
 class HC00(Chip):
     TYPE, DESC, FAMILY, PINS = "74HC00", "Quad 2-input NAND", "HC", GATE14
-    TPD = {("*", "*"): 20}
+    TPD = {("*", "*"): 18}          # SN74HC00 (SCLS181F): 18 ns max at 4.5 V, 25 degC
     DATASHEET = TI.format("sn74hc00")
     TABLE = _table2(lambda a, b: 1 - (a & b))
     eval = _quad(lambda a, b: 1 - (a & b))

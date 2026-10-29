@@ -38,20 +38,21 @@ def build(out_dir):
                 full = os.path.join(dp, f)
                 files.append((os.path.relpath(full, ROOT).replace(os.sep, "/"), open(full, "rb").read()))
     # the book's module names (from bench import Bench; import pc2, pc2tools), at the top level
-    for f in sorted(os.listdir(os.path.join(ROOT, "book_modules"))):
-        if f.endswith(".py"):
-            files.append((f, open(os.path.join(ROOT, "book_modules", f), "rb").read()))
+    # and pc2plus (Chapter 13) and pc2_custom (Chapter 12's finished copy)
+    book = [f for f in sorted(os.listdir(os.path.join(ROOT, "book_modules"))) if f.endswith(".py")]
+    for f in book:
+        files.append((f, open(os.path.join(ROOT, "book_modules", f), "rb").read()))
     readme = open(os.path.join(ROOT, "README.md"), encoding="utf-8").read()
     meta = (f"Metadata-Version: 2.1\nName: bbench\nVersion: {v}\n"
             "Summary: Breadboard Bench: a digital-logic simulator for learning how computers work (engine)\n"
-            "License: MIT\nLicense-File: LICENSE\nRequires-Python: >=3.11\n"
+            "Author: Peyam Pourbeik\nLicense: MIT\nLicense-File: LICENSE\nRequires-Python: >=3.11\n"
             "Classifier: License :: OSI Approved :: MIT License\n"
             "Description-Content-Type: text/markdown\n\n" + readme)
     files.append((f"{di}/METADATA", meta.encode("utf-8")))
     files.append((f"{di}/WHEEL", b"Wheel-Version: 1.0\nGenerator: bbench build_wheel.py\nRoot-Is-Purelib: true\nTag: py3-none-any\n"))
     files.append((f"{di}/entry_points.txt", b"[console_scripts]\nbbench = bbench.cli:main\n"))
     files.append((f"{di}/LICENSE", open(os.path.join(ROOT, "LICENSE"), "rb").read()))
-    files.append((f"{di}/top_level.txt", b"bbench\nbench\npc2\npc2tools\n"))
+    files.append((f"{di}/top_level.txt", ("bbench\n" + "".join(f[:-3] + "\n" for f in book)).encode()))
     record = "".join(f"{p},{_hash(d)},{len(d)}\n" for p, d in files) + f"{di}/RECORD,,\n"
     files.append((f"{di}/RECORD", record.encode()))
     os.makedirs(out_dir, exist_ok=True)

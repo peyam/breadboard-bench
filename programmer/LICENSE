@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 the authors of The Breadboard Computer
+Copyright (c) 2026 Peyam Pourbeik
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,8 +20,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-This licence covers the PC-2 companion code: the emulator and tools (pc2kit),
-the chip-level simulator (pc2sim / hw) and the EEPROM programmer sketch. The
-programmer sketch is derived from Ben Eater's EEPROM programmer
+This licence covers the EEPROM programmer in this folder: the sketch
+PC2_EEPROM_Programmer.ino, the ROM images in pc2_roms.h and the host test.
+The sketch is derived from Ben Eater's EEPROM programmer
 (https://github.com/beneater/eeprom-programmer), Copyright 2017 Ben Eater,
 also under the MIT licence; its notice is kept in the sketch.

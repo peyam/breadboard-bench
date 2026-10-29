@@ -1,6 +1,6 @@
 /*
   PC-2 EEPROM programmer
-  For an Arduino Nano (or Nano-compatible, 5 V, ATmega328P) and two 74HC595 shift registers.
+  For a Nano-compatible board (compatible with Arduino(R); 5 V, ATmega328P) and two 74HC595 shift registers.
 
   Derived from Ben Eater's EEPROM programmer, https://github.com/beneater/eeprom-programmer
   Copyright 2017 Ben Eater, MIT licence:
@@ -40,7 +40,7 @@
     and the pull-up holds WE high (no write). WE is NOT on D13: D13 carries the Nano's "L" LED
     (through about 1 kOhm to GND, which would drag WE down to about 2 V) and the bootloader
     drives D13 to flash that LED on every reset, which would write a stray byte.
-    Plug the EEPROM in only after the Serial Monitor shows the menu.
+    Insert or remove the EEPROM only with the USB cable unplugged.
     Both 74HC595: pin 10 (SRCLR) -> 5 V, pin 13 (OE) -> GND, pin 16 -> 5 V, pin 8 -> GND.
 
   Open the Serial Monitor at 57600 baud, line ending "Newline", and type:

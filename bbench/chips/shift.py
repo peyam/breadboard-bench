@@ -12,7 +12,7 @@ class HC595(Chip):
                 "9:QH2:out 10:SRCLR:in 11:SRCLK:clk 12:RCLK:clk 13:OE:in 14:SER:in 15:QA:tri 16:VCC:vcc")
     EDGE = {"SRCLK": "rise", "RCLK": "rise"}
     TPD = {("SRCLK", "QH2"): 32, ("SRCLR", "*"): 35, ("OE", "*"): 30, ("*", "*"): 30}
-    SETUP = {"SER": 20, "SRCLR": 20, "*": 20}
+    SETUP = {"SER": 20, "SRCLR": 10, "*": 20}   # SN74HC595 (SCLS041J): SRCLR inactive before SRCLK 10 ns
     HOLD = 0
     SAMPLED = {"SRCLK": ["SER", "SRCLR"], "RCLK": []}
     DATASHEET = TI.format("sn74hc595")
@@ -37,5 +37,8 @@ class HC595(Chip):
 
 
 HCT595 = variant(HC595, "74HCT595", "HCT",
-                 tpd={("SRCLK", "QH2"): 38, ("SRCLR", "*"): 40, ("OE", "*"): 35, ("*", "*"): 35},
+                 # SN74HCT595 (TI, rev. Dec 2021), 4.5 V, 25 degC max: SRCLK->QH' 42, RCLK->QA-QH 40,
+                 # SRCLR->QH' 40, OE enable 35, disable 30; setup SER 20, SRCLR 10; hold 0
+                 tpd={("SRCLK", "QH2"): 42, ("SRCLR", "*"): 40, ("OE", "*"): 35, ("*", "*"): 40},
+                 tdis={("OE", "*"): 30},
                  datasheet=TI.format("sn74hct595"))

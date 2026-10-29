@@ -334,3 +334,21 @@ def test_book_module_names():
     assert pc2.PC2 and pc2tools.NAMES[12] == "IN"
     rows = pc2tools.trace(pc2.asm(["IN 0", "OUT 0", "HALT"]), in0=9)
     assert len(rows) == 9 and rows[-1]["out"] == 9
+
+
+def test_book_modules_pc2_custom_and_pc2plus():
+    """Chapter 12's finished pc2_custom and Chapter 13's pc2plus, as the wheel installs them."""
+    import os
+    import sys
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "book_modules"))
+    try:
+        import pc2_custom
+        import pc2plus
+    finally:
+        sys.path.pop(0)
+    m = pc2_custom.PC2(pc2_custom.asm(["LDI 1", "OUT 0", "DBL", "JNC 1", "HALT"])).run()
+    assert m.shown == [1, 2, 4, 8, 16, 32, 64, 128]
+    old = pc2.ROM
+    assert {a >> 3 & 15 for a in old if old[a] != pc2_custom.ROM[a]} == {0xE, 0xF}
+    mem, lab = pc2plus.asm(["IN 0", "STORE x", "IN 1", "ADD x", "OUT 0", "HALT", "x: data 0"])
+    assert pc2plus.run(mem, 5, 6).out == 11

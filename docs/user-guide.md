@@ -152,10 +152,10 @@ print(st["nets"]["BUS0"], [k for k, on in st["leds"].items() if on])
 The book's boxes run as printed. All three import styles of the book work, because the engine ships small modules with the book's names:
 
 - `from bench import Bench` (the same as `from bbench.compat.pc2sim import Bench`);
-- `import sys; sys.path.insert(0, "tools/pc2kit")` then `import pc2, pc2tools`, `from pc2 import PC2, asm` or `from pc2tools import trace, NAMES` (the emulator and its helpers; the path line does nothing here, as there is no companion folder in the browser);
+- `import sys; sys.path.insert(0, "tools/pc2kit")` then `import pc2, pc2tools`, `from pc2 import PC2, asm` or `from pc2tools import trace, NAMES` (the emulator and its helpers; the path line does nothing here, as there is no companion folder in the browser); also `import pc2plus` (Chapter 13's PC-2+) and `from pc2_custom import PC2, asm` (Chapter 12's finished copy with JNC and DBL; on the desktop your own `tools/pc2kit/pc2_custom.py` is used instead);
 - `from bbench.compat.pc2sim import …` and `from bbench.projects.pc2_roms import …`.
 
-Boxes that read or write files in the companion folder still need desktop Python.
+A script's `if __name__ == "__main__":` block runs, as it does on the desktop. A box that writes a file (Chapter 12's ROM generator) writes it into the browser's own temporary files, which are lost when you reload the page; to keep the file, run the box with desktop Python.
 
 ## 8. Library
 

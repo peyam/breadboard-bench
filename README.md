@@ -6,7 +6,7 @@ Companion software for the book *The Breadboard Computer: build PC-2, the comput
 
 | Folder | What it is |
 |---|---|
-| `tools/pc2kit/` | The book's Python tools: `pc2.py` (PC-2 emulator and assembler), `pc2tools.py` (listings, traces), `prove.py` (checks every program). Run `python3 tools/pc2kit/prove.py`. |
+| `tools/pc2kit/` | The book's Python tools: `pc2.py` (PC-2 emulator and assembler), `pc2tools.py` (listings, traces), `prove.py` (checks every program), `pc2plus.py` (Chapter 13's 256-byte PC-2+ emulator). In Chapter 12 you add your own `pc2_custom.py` here. Run `python3 tools/pc2kit/prove.py`. |
 | `programmer/` | EEPROM programmer sketch for a Nano-compatible board (compatible with Arduino®), with the PC-2 ROM images built in. Derived from Ben Eater's MIT-licensed programmer. |
 | `roms/` | The four PC-2 ROM images as raw 32 KB `.bin` files (three microcode ROMs and the display ROM). |
 | `projects/` | Breadboard Bench projects (`.bbproj`): the whole PC-2, each module, and the small examples. Open them with **Open…** in the app. |
@@ -40,8 +40,9 @@ bbench.library()                        # every chip and part with its pins
 - `bbench/project.py`: the `.bbproj` format; `bbench/projects/`: PC-2, its modules and examples.
 - `bbench/compat/pc2sim.py`: the old `Bench`/`Netlist`/`Sim` API used by the book;
   `bbench/compat/pc2tools.py`: the book's pc2kit helpers. `book_modules/` holds the book's
-  module names (`bench`, `pc2`, `pc2tools`), which the wheel installs at the top level so
-  `from bench import Bench` and `import pc2, pc2tools` work in the app's Code tab.
+  module names (`bench`, `pc2`, `pc2tools`, `pc2plus`, `pc2_custom`), which the wheel installs
+  at the top level so `from bench import Bench` and `import pc2, pc2tools, pc2plus` work in the
+  app's Code tab.
 - `web/LICENSES/`: the licence texts and notices of the app and of what it vendors (Pyodide,
   CPython, Emscripten, the fonts), shown by the app's About · Licences page.
 - `python -m bbench`: command line (run, check, library, list, export).

@@ -387,3 +387,23 @@ def test_counter_menu_path_code_tab_imports_and_licences(app):
     for f in ("Breadboard-Bench-MIT.txt", "Pyodide-MPL-2.0.txt", "CPython-3.14-LICENSE.txt", "Emscripten-LICENSE.txt",
               "OFL-Fredoka.txt", "OFL-Lexend.txt", "OFL-JetBrainsMono.txt"):
         assert page.evaluate("async (f) => (await fetch('LICENSES/' + f)).ok", f), f
+
+
+# --------------------------------------------------------------------------- 10. Code tab runs scripts as scripts
+def test_code_tab_runs_main_block_and_book_modules(app):
+    """A box guarded by `if __name__ == "__main__":` must run (book p. 68 latch_lab.py, p. 107 alu_sim.py),
+    and Chapter 12/13's modules (pc2_custom, pc2plus) import the same way as pc2 and pc2tools."""
+    page = app
+    if page.engine_mode != "python":
+        return
+    page.click("#tab-code")
+    code = ("def main():\n    print('main ran', __name__)\n\nif __name__ == \"__main__\":\n    main()\n")
+    r = page.evaluate("async (c) => await bbench.engine.runPython(c)", code)
+    assert r["ok"] and "main ran __main__" in r["out"], r
+    code = ("import sys; sys.path.insert(0, 'tools/pc2kit')\n"
+            "from pc2_custom import PC2, asm\nimport pc2plus\n"
+            "m = PC2(asm(['IN 0', 'DBL', 'OUT 0', 'HALT']), in0=37).run()\n"
+            "mem, lab = pc2plus.asm(['IN 0', 'STORE x', 'IN 1', 'ADD x', 'OUT 0', 'HALT', 'x: data 0'])\n"
+            "print(m.out, pc2plus.run(mem, 5, 6).out)")
+    r = page.evaluate("async (c) => await bbench.engine.runPython(c)", code)
+    assert r["ok"] and "74 11" in r["out"], r
