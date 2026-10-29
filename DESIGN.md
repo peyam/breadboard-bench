@@ -86,7 +86,7 @@ Pins are referred to by number as strings. The netlist ("nets") is the source of
 - **The clock** of the live simulation runs in real time on every tab, as on the bench: clock sources and astable 555s tick at a chosen speed (1 Hz to 1 kHz of the main clock, real time, or fastest) with pause and one-cycle controls. For PC-2 this is the 555 run clock: RUN/STEP at RUN lets it reach the machine until HALT; at STEP each press of STEP gives one cycle.
 - **Library panel**: every chip with its pin-out card and function table, searchable.
 - **Projects**: open/save `.bbproj` to the user's computer; built-in examples: gates, latches, the 555 clock, every PC-2 module, the whole PC-2 (with ECHO, COUNTDOWN, ADD, BIGGER, MULTIPLY, DIVIDE, FIBONACCI ready to load), PC-1 programs.
-- **Look:** the book's design tokens (ink #1B2A41, paper #FFFBF3, copper/teal/sun/berry/sky/leaf/plum; Fredoka headings, Lexend UI text, JetBrains Mono for values), the same signal colours (bus yellow, control blue, data green, clock pink-red, address purple), light and dark themes.
+- **Look:** the book's design tokens (ink #1B2A41, paper #FFFBF3, copper/teal/sun/berry/sky/leaf/plum, grey #7E848D for address wires; Fredoka headings, Lexend UI text, JetBrains Mono for values), the same signal colours (bus yellow, control blue, data green, clock pink-red, address and step grey), light and dark themes.
 - **Accessibility:** keyboard operable, colour never the only cue (values also shown as text/patterns), screen-reader labels.
 - **Offline:** all assets vendored (Pyodide included); a service worker caches the app.
 - **Tests:** Playwright end-to-end tests (load PC-2, enter ECHO on the front panel, run, read the display).

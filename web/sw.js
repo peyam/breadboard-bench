@@ -2,7 +2,7 @@
 // Everything the app needs is cached on the first visit, so it then runs with no network.
 // App files are fetched fresh when online (so updates arrive) and from the cache when offline;
 // the large Pyodide files and fonts are always served from the cache once stored.
-const VERSION = "4202d96d8ddd";
+const VERSION = "23e4217d134e";
 const CACHE = `bbench-${VERSION}`;
 const FILES = [
  "./",

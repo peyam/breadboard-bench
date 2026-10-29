@@ -1,5 +1,5 @@
 // Signal colours, the same rules as the book's drawings (bus yellow, control blue, data green,
-// clock pink-red, address purple, +5 V red, GND ink). Colour is never the only cue: every wire
+// clock pink-red, address and step grey, +5 V red, GND ink). Colour is never the only cue: every wire
 // and tag also carries its name and its value as text.
 const CONTROL = new Set(["HLT_n", "MI_n", "RI_n", "RO_n", "IO_n", "II_n", "AI_n", "AO_n", "EO_n", "SU_n", "BI_n", "OI_n",
   "CE_n", "CO_n", "J_n", "FI_n", "XO_n", "SR_n", "SU", "CE", "RI"]);
@@ -20,16 +20,16 @@ export function netKind(net) {
 }
 
 const VAR = { bus: "--sig-bus", ctrl: "--sig-ctrl", data: "--sig-data", clock: "--sig-clock", addr: "--sig-addr", misc: "--sig-misc", pwr: "--pwr", gnd: "--gndc" };
-const TINTV = { bus: "--sun-t", ctrl: "--sky-t", data: "--leaf-t", clock: "--berry-t", addr: "--plum-t", misc: "--copper-t", pwr: "--copper-t", gnd: "--well" };
+const TINTV = { bus: "--sun-t", ctrl: "--sky-t", data: "--leaf-t", clock: "--berry-t", addr: "--grey-t", misc: "--copper-t", pwr: "--copper-t", gnd: "--well" };
 export const netColour = (net) => `var(${VAR[netKind(net)]})`;
 export const netTint = (net) => `var(${TINTV[netKind(net)]})`;
 
 // Real wire colours for the breadboard (a physical board looks the same in either theme)
-export const WIRE_HEX = { pwr: "#D7372B", gnd: "#222222", bus: "#D9A21B", ctrl: "#3D7FD0", data: "#4E9F3D", clock: "#D64570", addr: "#7B5EA7", misc: "#E8743B" };
+export const WIRE_HEX = { pwr: "#D7372B", gnd: "#222222", bus: "#D9A21B", ctrl: "#3D7FD0", data: "#4E9F3D", clock: "#D64570", addr: "#7E848D", misc: "#E8743B" };
 export const wireHex = (net) => WIRE_HEX[netKind(net)];
 export const WIRE_SWATCHES = [
   ["#D7372B", "red (+5 V)"], ["#222222", "black (GND)"], ["#D9A21B", "yellow (bus)"], ["#3D7FD0", "blue (control)"],
-  ["#4E9F3D", "green (data)"], ["#D64570", "pink (clock)"], ["#7B5EA7", "purple (address)"], ["#E8743B", "orange"], ["#F2F2F2", "white"],
+  ["#4E9F3D", "green (data)"], ["#D64570", "pink (clock)"], ["#7E848D", "grey (address)"], ["#E8743B", "orange"], ["#F2F2F2", "white"],
 ];
 
 export function vclass(v) {

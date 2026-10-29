@@ -43,7 +43,7 @@ MODULES = ["Clock", "Bus", "A register", "B register", "ALU", "Flags", "Program 
            "Memory address", "RAM", "Instruction register", "Output", "Display", "Input", "Control"]
 
 # the book's signal colours
-BUS, CTRL, DATA, CLOCK, ADDR, COPPER = "#D9A21B", "#3D7FD0", "#4E9F3D", "#D64570", "#7B5EA7", "#E8743B"
+BUS, CTRL, DATA, CLOCK, ADDR, COPPER = "#D9A21B", "#3D7FD0", "#4E9F3D", "#D64570", "#7E848D", "#E8743B"
 CONTROL = {"HLT_n", "MI_n", "RI_n", "RO_n", "IO_n", "II_n", "AI_n", "AO_n", "EO_n", "SU_n", "BI_n", "OI_n",
            "CE_n", "CO_n", "J_n", "FI_n", "XO_n", "SR_n", "SU", "CE", "RI"}
 

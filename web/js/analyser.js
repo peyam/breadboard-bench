@@ -8,7 +8,7 @@ import { engine } from "../engine.js";
 import { netKind } from "./signals.js";
 
 const ROW = 30, BUSROW = 30, RULER = 30;
-const KIND_VAR = { bus: "--bus", ctrl: "--sky", data: "--leaf", clock: "--berry", addr: "--plum", misc: "--copper", pwr: "--pwr", gnd: "--ink2" };
+const KIND_VAR = { bus: "--bus", ctrl: "--sky", data: "--leaf", clock: "--berry", addr: "--grey", misc: "--copper", pwr: "--pwr", gnd: "--ink2" };
 
 export class Analyser {
   constructor(root, app) {

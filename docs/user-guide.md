@@ -59,7 +59,7 @@ Colours are never the only clue: every wire and net tag also shows its name and 
 
 **Wire.** Click a pin (it lights up blue), then click another pin. The wire is routed with right angles. A wire joins the two pins' nets; if both already had names, the net keeps the better name (VCC and GND always win).
 
-**Net labels.** Choose **Net label** (or press **L**) and click a pin to name its net — `BUS0`, `CLK`, `VCC`. Pins with the same net name are connected, even without a drawn wire. This is how the book draws big circuits: each pin ends in a rounded tag with the signal's name, coloured by kind (bus yellow, control blue, data green, clock pink-red, address purple, +5 V red).
+**Net labels.** Choose **Net label** (or press **L**) and click a pin to name its net — `BUS0`, `CLK`, `VCC`. Pins with the same net name are connected, even without a drawn wire. This is how the book draws big circuits: each pin ends in a rounded tag with the signal's name, coloured by kind (bus yellow, control blue, data green, clock pink-red, address grey, +5 V red).
 
 **Edit values.** Select a part to open its card: change its name, a resistor's value, an LED's colour, a clock's period, or read every pin and its net. Click a net in the card to select it, rename it, or add it to the analyser (**+ Probe**).
 
@@ -92,7 +92,7 @@ The boards are drawn 1:1, like the book's: 830 holes, rows 1–63, holes a–e a
 
 - **Boards**: the list on the left. Click a board to zoom to it; double-click to rename it. **+ Board** adds a new empty board. PC-2 opens with all 17 of its boards.
 - **Place parts**: the list "Not on a board" holds every part that has no place yet. Drag one onto a hole, or click it to drop it on the first free rows. Chips straddle the centre gap with pin 1 at the left (the notch towards row 1); resistors, capacitors and LEDs go across the gap; drag a part to move it. Select a leaded part to see its legs as blue handles, and drag a handle to move one leg.
-- **Wires**: pick a colour from the swatches (the book's colours: red +5 V, black GND, yellow bus, blue control, green data, pink clock, purple address), click a hole, then click another hole or a rail stripe.
+- **Wires**: pick a colour from the swatches (the book's colours: red +5 V, black GND, yellow bus, blue control, green data, pink clock, grey address), click a hole, then click another hole or a rail stripe.
 - **Click a hole** to see which half-row it is in and which net is there.
 - **Operate** DIP switches, slide switches and buttons on the board just as on the schematic; LEDs and digits light from the simulation.
 
