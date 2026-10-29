@@ -8,11 +8,12 @@ import traceback
 
 _P = None        # the open bbench.Project
 _S = None        # its simulator
-_NS = {}         # the Code tab's namespace
+_NS = {"__name__": "__main__"}   # the Code tab's namespace: a script's `if __name__ == "__main__":` runs
 
 
 def _bb_init():
     import bbench
+    _NS["__name__"] = "__main__"
     _NS["bbench"] = bbench
     return getattr(bbench, "__version__", "")
 

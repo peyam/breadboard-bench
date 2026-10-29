@@ -47,7 +47,7 @@ function led(b, r, d, x, y, net, colour = "red") {
 export function nandExample() {
   const b = new Builder("NAND gate", "Two switches drive one NAND gate of a 74HCT00. The LED is off only when both switches are on.");
   input(b, "S1", "R1", 100, 120, "A");
-  input(b, "S2", "R2", 100, 260, "B");
+  input(b, "S2", "R2", 100, 320, "B");   // low enough that R1's GND tag does not cover the S2 label
   b.part("U1", "74HCT00", 300, 60);
   b.wire("S1.2", "U1.1").wire("S2.2", "U1.2");
   led(b, "R3", "D1", 520, 120, "Y");
