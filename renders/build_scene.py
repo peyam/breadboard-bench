@@ -416,8 +416,13 @@ class BoardBuilder:
 
     # wires --------------------------------------------------------------
     def wire(self, w, i):
-        a = self.hole(*w["a"])
-        if isinstance(w["b"], str):
+        if isinstance(w["a"][0], str):                 # rail-to-rail jumper: a = [rail, row], b = [rail, row]
+            a = self.rail(*w["a"])
+        else:
+            a = self.hole(*w["a"])
+        if isinstance(w["b"], list) and isinstance(w["b"][0], str):
+            b = self.rail(*w["b"])
+        elif isinstance(w["b"], str):
             b = self.rail(w["b"], w["a"][0])
         else:
             b = self.hole(*w["b"])
@@ -628,17 +633,19 @@ def programmer_scene():
     it = lambda ref, label, r, n, wide: dict(ref=ref, kind="chip", rows=[r, r + n // 2 - 1], wide=wide, label=label, pins=n)
     data["items"] += [it("U1", "74HC595", 19, 16, False), it("U2", "74HC595", 29, 16, False), it("U3", "AT28C256", 40, 28, True)]
     W = lambda net, a, b, col: data["wires"].append(dict(net=net, a=a, b=b, colour=col))
-    Y, B, G, P_, K, R = "#D9A21B", "#3D7FD0", "#4E9F3D", "#7B5EA7", "#222222", "#D7372B"
+    Y, B, G, P_, K, R = "#D9A21B", "#3D7FD0", "#4E9F3D", "#7E848D", "#222222", "#D7372B"
     # Nano: bottom side (c) pin k at row 16-(k-1); top side (h) pin 16.. at row 2..
     nb = lambda k: [16 - (k - 1), "b"]          # use hole b on the bottom node
     nt = lambda k: [2 + (k - 16), "i"]          # use hole i on the top node
     # shift-register control
-    W("SER", nb(5), [21, "h"], B)               # D2 -> U1 pin 14
-    W("SRCLK", nb(6), [24, "h"], B)             # D3 -> U1 pin 11
-    W("SRCLK", [24, "i"], [34, "h"], B)
-    W("RCLK", nb(7), [23, "h"], B)              # D4 -> U1 pin 12
-    W("RCLK", [23, "i"], [33, "h"], B)
-    W("QH'", [26, "h"], [31, "h"], B)           # U1 QH' -> U2 SER
+    # colours as in Figure 7.22: yellow serial data, pink clocks, grey address, blue OE/WE, green data
+    PK = "#D64570"
+    W("SER", nb(5), [21, "h"], Y)               # D2 -> U1 pin 14
+    W("SRCLK", nb(6), [24, "h"], PK)            # D3 -> U1 pin 11
+    W("SRCLK", [24, "i"], [34, "h"], PK)
+    W("RCLK", nb(7), [23, "h"], PK)             # D4 -> U1 pin 12
+    W("RCLK", [23, "i"], [33, "h"], PK)
+    W("QH'", [26, "h"], [31, "h"], Y)           # U1 QH' -> U2 SER
     # address bits A0..A7 from U1 (QA pin15 top row 20; QB..QH pins1..7 bottom rows 19..25)
     W("A0", [20, "i"], [49, "b"], P_)
     for k in range(1, 8):
@@ -653,15 +660,24 @@ def programmer_scene():
                                        (12, [52, "i"]), (13, [51, "i"]), (14, [50, "i"]), (15, [49, "i"]))):
         W(f"D{k}", nb(dpin), dest, G)
     W("WE", nt(19), [41, "i"], B)               # A0 (D14) -> WE pin 27 (never D13: the bootloader flashes its LED)
-    # power
+    # power (Table 7.2): Nano 5V -> + rail, GND -> - rail; the top - rail is joined to the bottom - rail
     W("GND", nb(4), "B-", K)
     W("VCC", nt(27), "T+", R)
-    for r_, c_ in ((19, "a"), (29, "a"), (53, "a")):
-        W("GND", [r_ + (7 if r_ != 53 else 0), "a"] if r_ != 53 else [53, "a"], "B-", K)
-    for r_ in (19, 29):
+    W("GND", ["T-", 60], ["B-", 60], K)          # join the two GND rails
+    W("VCC", ["T+", 61], ["B+", 61], R)          # and the two +5 V rails
+    for r_ in (26, 36, 53):                     # 595 pin 8, 595 pin 8, EEPROM pin 14
+        W("GND", [r_, "a"], "B-", K)
+    for r_ in (19, 29, 40):                     # 595 pin 16, 595 pin 16, EEPROM pin 28
         W("VCC", [r_, "j"], "T+", R)
-    W("VCC", [40, "j"], "T+", R)
-    W("WEpullup", [41, "j"], "T+", R)
+    W("CE", [48, "h"], "T-", K)                 # EEPROM CE (pin 20) -> GND: always selected
+    for r_ in (25, 35):                         # 595 SRCLR (pin 10) -> +5 V: never clear
+        W("SRCLR", [r_, "h"], "T+", R)
+    for r_ in (22, 32):                         # 595 OE (pin 13) -> GND: outputs always on
+        W("OE595", [r_, "h"], "T-", K)
+    # the 10 kOhm pull-up from WE (pin 27, row 41) to +5 V, and one 100 nF per chip, VCC row to GND
+    data["items"].append(dict(ref="R1", kind="r-rail", rows=[41, 41], hole=[41, "j"], rail="T+", value="10k"))
+    for ref, r_ in (("C1", 19), ("C2", 29), ("C3", 40)):
+        data["items"].append(dict(ref=ref, kind="decoupling", rows=[r_, r_], hole=[r_, "i"], rail="T-", value="100nF"))
     bbld = BoardBuilder("prog", data)
     bbld.build()
     nano(0, 0, 2)
@@ -681,13 +697,16 @@ def probe_scene():
 
 
 def analyser_scene(data):
-    """Two PC-2 boards (Clock behind, A register in front) with an 8-channel USB logic analyser clipped on (Ch 10)."""
-    clk = BoardBuilder("Clock", data["boards"]["Clock"], 0.0, 2.9)
-    areg = BoardBuilder("A register", data["boards"]["A register"], 0.0, -2.9)
+    """Three PC-2 boards (Clock behind, Control sequencer, A register in front) with an 8-channel USB logic
+    analyser clipped on at the holes of Figure 10.12 (Ch 10)."""
+    clk = BoardBuilder("Clock", data["boards"]["Clock"], 0.0, 5.8)
+    seq = BoardBuilder("Control sequencer", data["boards"]["Control sequencer"], 0.0, 0.0)
+    areg = BoardBuilder("A register", data["boards"]["A register"], 0.0, -5.8)
     clk.build()
+    seq.build()
     areg.build()
     # analyser box on the desk in front of the boards
-    bx, by = 4.2, -9.6
+    bx, by = 4.2, -12.5
     body = mat("la_body", (0.035, 0.035, 0.04), rough=0.5)
     box("la_box", bx, by, 0.4 - BOARD_T, 3.8, 2.5, 0.8, body, bevel=0.12)
     box("la_plate", bx + 0.3, by - 0.1, 0.805 - BOARD_T, 2.4, 1.5, 0.01, mat("la_plate", (0.2, 0.21, 0.23), rough=0.35))
@@ -700,10 +719,12 @@ def analyser_scene(data):
     curve("la_usb", [(bx + 2.8, by, 0.45 - BOARD_T), (bx + 6, by - 0.5, 0.2 - BOARD_T), (bx + 9, by - 3, -BOARD_T + 0.18),
                      (bx + 14, by - 9, -BOARD_T + 0.18)], 0.17, usb)
     # channel leads: colour, board, hole
+    # the free holes of Figure 10.12: CLK 18c, CLK_n 19b, HLT_n 28g (Clock); STEP0-2 3g, 4g, 5g
+    # (Control sequencer); BUS0 21g, BUS3 24g (A register)
     chans = [("#222222", clk, None),                      # ground lead to the Clock board's GND rail
-             ("#8B5A2B", clk, (3, "b")), ("#D7372B", clk, (25, "b")), ("#E8743B", clk, (27, "b")),
-             ("#F4C430", clk, (33, "b")), ("#4E9F3D", areg, (3, "b")), ("#3D7FD0", areg, (5, "b")),
-             ("#7B5EA7", areg, (6, "b")), ("#9A9A9A", areg, (13, "b"))]
+             ("#8B5A2B", clk, (18, "c")), ("#D7372B", clk, (19, "b")), ("#E8743B", clk, (28, "g")),
+             ("#F4C430", seq, (3, "g")), ("#4E9F3D", seq, (4, "g")), ("#3D7FD0", seq, (5, "g")),
+             ("#7B5EA7", areg, (21, "g")), ("#9A9A9A", areg, (24, "g"))]
     grab_body = mat("grab_body", (0.85, 0.85, 0.82), rough=0.4)
     pin_m = mat("pin", (0.75, 0.76, 0.78), rough=0.3, metal=1.0)
     for i, (col, bb, h) in enumerate(chans):
@@ -755,8 +776,8 @@ def extra(what, args):
         camera((-1.0, -10.0, 10.0), (2.5, 2.0, 0.2), lens=40, dof=6)
     elif what == "analyser":
         analyser_scene(data)
-        lights(0, -2, 1.4)
-        camera((-3.0, -24.5, 19.5), (1.2, -2.6, 0.0), lens=40, dof=9)
+        lights(0, -2, 1.8)
+        camera((-3.0, -30.0, 25.0), (1.2, -3.2, 0.0), lens=40, dof=11)
     elif what == "programmer":
         programmer_scene()
         lights()
